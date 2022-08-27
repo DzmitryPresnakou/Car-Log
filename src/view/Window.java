@@ -24,7 +24,12 @@ import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
+import controller.OpenNewWindowController;
+
 public class Window extends JFrame {
+
+	private OpenNewWindowController openController;
+//	private ReadController readController;
 
 	private JButton gasButton = new JButton(new ImageIcon(getClass().getClassLoader().getResource(("gas.jpg"))));
 	private JButton expensesButton = new JButton(
@@ -41,7 +46,7 @@ public class Window extends JFrame {
 			new ImageIcon(getClass().getClassLoader().getResource(("addtask.jpg"))));
 
 	private JFrame frame;
-	
+
 	private JLabel run;
 	private JLabel expenses;
 	private JLabel oil;
@@ -168,15 +173,14 @@ public class Window extends JFrame {
 		addtaskPanel.add(addtaskButton);
 		addtaskPanel.add(addtaskLabel);
 		container.add(addtaskPanel);
-		
-		
+
 		JPanel infoPanel = new JPanel();
 		infoPanel.setPreferredSize(new Dimension(460, 180));
 		infoPanel.setBackground(new Color(240, 255, 240));
 		infoPanel.setLayout(new FlowLayout());
 
 		container.add(infoPanel, BorderLayout.SOUTH);
-		
+
 		run = new JLabel("км пробег на дату");
 		run.setForeground(new Color(0, 0, 160));
 		run.setPreferredSize(new Dimension(450, 20));
@@ -191,23 +195,176 @@ public class Window extends JFrame {
 		oil.setForeground(new Color(0, 0, 160));
 		oil.setPreferredSize(new Dimension(450, 20));
 		infoPanel.add(oil);
-		
+
 		remind = new JLabel("Напоминания:");
 		remind.setForeground(new Color(0, 0, 160));
 		remind.setPreferredSize(new Dimension(450, 20));
 		infoPanel.add(remind);
-		
+
 		myList = new JList();
 		myScrollpane = new JScrollPane(myList);
 		myScrollpane.setPreferredSize(new Dimension(450, 70));
 		myList.setLayoutOrientation(JList.VERTICAL);
 		listModel = new DefaultListModel();
 		infoPanel.add(myScrollpane);
-	
 
 		frame.setResizable(false);
 		frame.setVisible(true);
 
+	}
+
+	public OpenNewWindowController getOpenController() {
+		return openController;
+	}
+
+	public void setOpenController(OpenNewWindowController openController) {
+		this.openController = openController;
+		gasButton.addActionListener(openController);
+		expensesButton.addActionListener(openController);
+		tasksButton.addActionListener(openController);
+		oilButton.addActionListener(openController);
+		carwashButton.addActionListener(openController);
+		carButton.addActionListener(openController);
+		addgasButton.addActionListener(openController);
+		addexpenseButton.addActionListener(openController);
+		addtaskButton.addActionListener(openController);
+
+	}
+
+	public JButton getGasButton() {
+		return gasButton;
+	}
+
+	public void setGasButton(JButton gasButton) {
+		this.gasButton = gasButton;
+	}
+
+	public JButton getExpensesButton() {
+		return expensesButton;
+	}
+
+	public void setExpensesButton(JButton expensesButton) {
+		this.expensesButton = expensesButton;
+	}
+
+	public JButton getTasksButton() {
+		return tasksButton;
+	}
+
+	public void setTasksButton(JButton tasksButton) {
+		this.tasksButton = tasksButton;
+	}
+
+	public JButton getOilButton() {
+		return oilButton;
+	}
+
+	public void setOilButton(JButton oilButton) {
+		this.oilButton = oilButton;
+	}
+
+	public JButton getCarwashButton() {
+		return carwashButton;
+	}
+
+	public void setCarwashButton(JButton carwashButton) {
+		this.carwashButton = carwashButton;
+	}
+
+	public JButton getCarButton() {
+		return carButton;
+	}
+
+	public void setCarButton(JButton carButton) {
+		this.carButton = carButton;
+	}
+
+	public JButton getAddgasButton() {
+		return addgasButton;
+	}
+
+	public void setAddgasButton(JButton addgasButton) {
+		this.addgasButton = addgasButton;
+	}
+
+	public JButton getAddexpenseButton() {
+		return addexpenseButton;
+	}
+
+	public void setAddexpenseButton(JButton addexpenseButton) {
+		this.addexpenseButton = addexpenseButton;
+	}
+
+	public JButton getAddtaskButton() {
+		return addtaskButton;
+	}
+
+	public void setAddtaskButton(JButton addtaskButton) {
+		this.addtaskButton = addtaskButton;
+	}
+
+	public JFrame getFrame() {
+		return frame;
+	}
+
+	public void setFrame(JFrame frame) {
+		this.frame = frame;
+	}
+
+	public JLabel getRun() {
+		return run;
+	}
+
+	public void setRun(JLabel run) {
+		this.run = run;
+	}
+
+	public JLabel getExpenses() {
+		return expenses;
+	}
+
+	public void setExpenses(JLabel expenses) {
+		this.expenses = expenses;
+	}
+
+	public JLabel getOil() {
+		return oil;
+	}
+
+	public void setOil(JLabel oil) {
+		this.oil = oil;
+	}
+
+	public JLabel getRemind() {
+		return remind;
+	}
+
+	public void setRemind(JLabel remind) {
+		this.remind = remind;
+	}
+
+	public JList getMyList() {
+		return myList;
+	}
+
+	public void setMyList(JList myList) {
+		this.myList = myList;
+	}
+
+	public JScrollPane getMyScrollpane() {
+		return myScrollpane;
+	}
+
+	public void setMyScrollpane(JScrollPane myScrollpane) {
+		this.myScrollpane = myScrollpane;
+	}
+
+	public DefaultListModel getListModel() {
+		return listModel;
+	}
+
+	public void setListModel(DefaultListModel listModel) {
+		this.listModel = listModel;
 	}
 
 }
