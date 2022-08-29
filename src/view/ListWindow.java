@@ -1,5 +1,6 @@
 package view;
 
+import java.awt.Color;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -18,10 +19,13 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.text.PlainDocument;
 
+import org.jdatepicker.JDatePicker;
+
 import controller.BackWindowController;
 import controller.MyListSelectionListener;
 import model.Database;
 import model.Expense;
+import java.awt.Font;
 
 public class ListWindow extends JFrame {
 	private JFrame frame;
@@ -41,15 +45,15 @@ public class ListWindow extends JFrame {
 	private BackWindowController backWindowController;
 	private MyListSelectionListener myListSelectionListener;
 
-	private JTextField nameField = new JTextField(39);
-	private JTextField runField = new JTextField(7);
+	private JTextField nameField = new JTextField(34);
+	private JTextField runField = new JTextField(6);
 	private JTextField dateField = new JTextField(10);
-	private JTextField priceField = new JTextField(6);
+	private JTextField priceField = new JTextField(4);
 	private JTextField intervalField = new JTextField(7);
 	private JButton addButton = new JButton("Добавить");
 	private JButton editButton = new JButton("Править");
 	private JButton deleteButton = new JButton("Удалить");
-	private JButton backButton = new JButton("Главное меню");
+	private JButton backButton = new JButton("Назад");
 	private JCheckBox checkInterval = new JCheckBox();
 	private JLabel periodically = new JLabel("Периодично");
 	private JLabel interval = new JLabel("Интервал");
@@ -58,7 +62,7 @@ public class ListWindow extends JFrame {
 
 		frame = new JFrame();
 		frame.setTitle("Expenses List");
-		frame.setSize(455, 400);
+		frame.setSize(370, 373);
 		// по центру
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -67,7 +71,7 @@ public class ListWindow extends JFrame {
 		container.setLayout(new FlowLayout());
 		myList = new JList();
 		myScrollpane = new JScrollPane(myList);
-		myScrollpane.setPreferredSize(new Dimension(430, 205));
+		myScrollpane.setPreferredSize(new Dimension(345, 205));
 		myList.setLayoutOrientation(JList.VERTICAL);
 		listModel = new DefaultListModel();
 
@@ -81,43 +85,83 @@ public class ListWindow extends JFrame {
 
 		container.add(myScrollpane);
 
-		JLabel nameLabel = new JLabel("Наименование");
-		container.add(nameLabel);
-		container.add(nameField);
+		JPanel namePanel = new JPanel();
+		namePanel.setPreferredSize(new Dimension(352, 25));
+		namePanel.setLayout(new FlowLayout());
+
+		JLabel nameLabel = new JLabel("Действие");
+		nameLabel.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		nameLabel.setPreferredSize(new Dimension(54, 20));
+		namePanel.add(nameLabel);
+		nameField.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		namePanel.add(nameField);
+
+		container.add(namePanel);
+
+		JPanel infoPanel = new JPanel();
+		infoPanel.setPreferredSize(new Dimension(352, 25));
+		infoPanel.setLayout(new FlowLayout());
 
 		JLabel runLabel = new JLabel("Пробег");
-		container.add(runLabel);
-		container.add(runField);
+		runLabel.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		runLabel.setPreferredSize(new Dimension(40, 20));
+		infoPanel.add(runLabel);
+		runField.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		runField.setText("7777777");
+		infoPanel.add(runField);
 
-		JLabel kmLabel = new JLabel("км, ");
-		container.add(kmLabel);
+		JLabel kmLabel = new JLabel("км");
+		kmLabel.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		kmLabel.setPreferredSize(new Dimension(15, 20));
+		infoPanel.add(kmLabel);
 
 		JLabel dateLabel = new JLabel("Дата");
-		container.add(dateLabel);
-		container.add(dateField);
+		dateLabel.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		dateLabel.setPreferredSize(new Dimension(30, 20));
+		infoPanel.add(dateLabel);
+
+		JDatePicker chooseDate = new JDatePicker();
+		chooseDate.getFormattedTextField().setFont(new Font("Tahoma", Font.PLAIN, 11));
+		chooseDate.setPreferredSize(new Dimension(104, 20));
+		infoPanel.add(chooseDate);
 
 		JLabel priceLabel = new JLabel("Цена");
-		container.add(priceLabel);
-		container.add(priceField);
+		priceLabel.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		priceLabel.setPreferredSize(new Dimension(30, 20));
+		infoPanel.add(priceLabel);
+		priceField.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		infoPanel.add(priceField);
 
 		JLabel bynLabel = new JLabel("р");
-		container.add(bynLabel);
+		bynLabel.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		bynLabel.setPreferredSize(new Dimension(10, 20));
+		infoPanel.add(bynLabel);
+
+		container.add(infoPanel);
+		addButton.setFont(new Font("Tahoma", Font.PLAIN, 11));
 
 		container.add(addButton);
+		deleteButton.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		container.add(deleteButton);
+		editButton.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		container.add(editButton);
+		backButton.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		container.add(backButton);
 
 		JPanel intervalPanel = new JPanel();
 		intervalPanel.setPreferredSize(new Dimension(400, 25));
 		intervalPanel.setLayout(new FlowLayout());
+		periodically.setFont(new Font("Tahoma", Font.PLAIN, 11));
 
 		intervalPanel.add(periodically);
 		intervalPanel.add(checkInterval);
+		interval.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		intervalPanel.add(interval);
+		intervalField.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		intervalPanel.add(intervalField);
 
 		JLabel intKmLabel = new JLabel("км");
+		intKmLabel.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		intervalPanel.add(intKmLabel);
 
 		container.add(intervalPanel);
@@ -198,8 +242,7 @@ public class ListWindow extends JFrame {
 	public void setMyListSelectionListener(MyListSelectionListener myListSelectionListener) {
 		this.myListSelectionListener = myListSelectionListener;
 	}
-	
-	
+
 	public BackWindowController getBackWindowController() {
 		return backWindowController;
 	}
@@ -327,6 +370,26 @@ public class ListWindow extends JFrame {
 		} else {
 			showMessage("Нет устройств");
 		}
+	}
+
+	public void setNameField(JTextField nameField) {
+		this.nameField = nameField;
+	}
+
+	public void setRunField(JTextField runField) {
+		this.runField = runField;
+	}
+
+	public void setDateField(JTextField dateField) {
+		this.dateField = dateField;
+	}
+
+	public void setPriceField(JTextField priceField) {
+		this.priceField = priceField;
+	}
+
+	public void setIntervalField(JTextField intervalField) {
+		this.intervalField = intervalField;
 	}
 
 }

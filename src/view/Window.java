@@ -25,6 +25,14 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
 import controller.OpenNewWindowController;
+import java.awt.Font;
+import javax.swing.JSeparator;
+
+import org.jdatepicker.DatePicker;
+import org.jdatepicker.JDatePicker;
+
+import java.awt.event.MouseMotionAdapter;
+import java.awt.event.MouseEvent;
 
 public class Window extends JFrame {
 
@@ -48,17 +56,23 @@ public class Window extends JFrame {
 	private JFrame frame;
 
 	private JLabel run;
-	private JLabel expenses;
+	private JLabel gasExpenses;
 	private JLabel oil;
 	private JLabel remind;
 	private JList myList;
 	private JScrollPane myScrollpane;
 	private DefaultListModel listModel;
+	private JLabel runAmount;
+	private JLabel gasAmountExpenses;
+	private JLabel gasExpensesMoney;
+	private JLabel oilReminderRun;
+	private JLabel oilReminderValue;
 
 	public Window() throws IOException {
 
 		frame = new JFrame("Car log");
-		frame.setSize(500, 810);
+		frame.setResizable(false);
+		frame.setSize(370, 560);
 		// по центру
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -67,7 +81,7 @@ public class Window extends JFrame {
 		container.setLayout(new FlowLayout());
 
 		JPanel gasPanel = new JPanel();
-		gasPanel.setPreferredSize(new Dimension(150, 185));
+		gasPanel.setPreferredSize(new Dimension(110, 140));
 		gasPanel.setLayout(new FlowLayout());
 		gasButton.setBorderPainted(false);
 		gasButton.setFocusPainted(false);
@@ -79,7 +93,7 @@ public class Window extends JFrame {
 		container.add(gasPanel);
 
 		JPanel expensesPanel = new JPanel();
-		expensesPanel.setPreferredSize(new Dimension(150, 185));
+		expensesPanel.setPreferredSize(new Dimension(110, 140));
 		expensesPanel.setLayout(new FlowLayout());
 		expensesButton.setBorderPainted(false);
 		expensesButton.setFocusPainted(true);
@@ -91,7 +105,7 @@ public class Window extends JFrame {
 		container.add(expensesPanel);
 
 		JPanel tasksPanel = new JPanel();
-		tasksPanel.setPreferredSize(new Dimension(150, 185));
+		tasksPanel.setPreferredSize(new Dimension(110, 140));
 		tasksPanel.setLayout(new FlowLayout());
 		tasksButton.setBorderPainted(false);
 		tasksButton.setFocusPainted(true);
@@ -103,7 +117,7 @@ public class Window extends JFrame {
 		container.add(tasksPanel);
 
 		JPanel oilPanel = new JPanel();
-		oilPanel.setPreferredSize(new Dimension(150, 185));
+		oilPanel.setPreferredSize(new Dimension(110, 140));
 		oilPanel.setLayout(new FlowLayout());
 		oilButton.setBorderPainted(false);
 		oilButton.setFocusPainted(true);
@@ -115,7 +129,7 @@ public class Window extends JFrame {
 		container.add(oilPanel);
 
 		JPanel carwashPanel = new JPanel();
-		carwashPanel.setPreferredSize(new Dimension(150, 185));
+		carwashPanel.setPreferredSize(new Dimension(110, 140));
 		carwashPanel.setLayout(new FlowLayout());
 		carwashButton.setBorderPainted(false);
 		carwashButton.setFocusPainted(true);
@@ -127,7 +141,7 @@ public class Window extends JFrame {
 		container.add(carwashPanel);
 
 		JPanel carPanel = new JPanel();
-		carPanel.setPreferredSize(new Dimension(150, 185));
+		carPanel.setPreferredSize(new Dimension(110, 140));
 		carPanel.setLayout(new FlowLayout());
 		carButton.setBorderPainted(false);
 		carButton.setFocusPainted(true);
@@ -138,79 +152,92 @@ public class Window extends JFrame {
 		carPanel.add(carLabel);
 		container.add(carPanel);
 
-		JPanel addgasPanel = new JPanel();
-		addgasPanel.setPreferredSize(new Dimension(150, 185));
-		addgasPanel.setLayout(new FlowLayout());
-		addgasButton.setBorderPainted(false);
-		addgasButton.setFocusPainted(true);
-		addgasButton.setContentAreaFilled(false);
-		addgasButton.setName("Добавить заправку");
-		JLabel addgasLabel = new JLabel("Добавить заправку");
-		addgasPanel.add(addgasButton);
-		addgasPanel.add(addgasLabel);
-		container.add(addgasPanel);
-
-		JPanel addexpensePanel = new JPanel();
-		addexpensePanel.setPreferredSize(new Dimension(150, 185));
-		addexpensePanel.setLayout(new FlowLayout());
-		addexpenseButton.setBorderPainted(false);
-		addexpenseButton.setFocusPainted(true);
-		addexpenseButton.setContentAreaFilled(false);
-		addexpenseButton.setName("Добавить расход");
-		JLabel addexpenseLabel = new JLabel("Добавить расход");
-		addexpensePanel.add(addexpenseButton);
-		addexpensePanel.add(addexpenseLabel);
-		container.add(addexpensePanel);
-
-		JPanel addtaskPanel = new JPanel();
-		addtaskPanel.setPreferredSize(new Dimension(150, 185));
-		addtaskPanel.setLayout(new FlowLayout());
-		addtaskButton.setBorderPainted(false);
-		addtaskButton.setFocusPainted(true);
-		addtaskButton.setContentAreaFilled(false);
-		addtaskButton.setName("Добавить задачу");
-		JLabel addtaskLabel = new JLabel("Добавить задачу");
-		addtaskPanel.add(addtaskButton);
-		addtaskPanel.add(addtaskLabel);
-		container.add(addtaskPanel);
-
 		JPanel infoPanel = new JPanel();
-		infoPanel.setPreferredSize(new Dimension(460, 180));
-		infoPanel.setBackground(new Color(240, 255, 240));
+		infoPanel.setPreferredSize(new Dimension(330, 225));
+		infoPanel.setBackground(new Color(225, 225, 225));
 		infoPanel.setLayout(new FlowLayout());
 
 		container.add(infoPanel, BorderLayout.SOUTH);
-
+		
+		JPanel runAmountPanel = new JPanel();
+		runAmountPanel.setPreferredSize(new Dimension(325, 24));
+		runAmountPanel.setBackground(new Color(225, 225, 225));
+		runAmountPanel.setLayout(new FlowLayout());
+		
+		runAmount = new JLabel();
+		runAmount.setFont(new Font("Tahoma", Font.BOLD, 12));
+		runAmount.setText("1200200");
+		runAmount.setForeground(new Color(0, 0, 255));
+		runAmount.setPreferredSize(new Dimension(58, 20));
+		runAmountPanel.add(runAmount);
+		
 		run = new JLabel("км пробег на дату");
-		run.setForeground(new Color(0, 0, 160));
-		run.setPreferredSize(new Dimension(450, 20));
-		infoPanel.add(run);
-
-		expenses = new JLabel("Расходы за текущий месяц");
-		expenses.setForeground(new Color(0, 0, 160));
-		expenses.setPreferredSize(new Dimension(450, 20));
-		infoPanel.add(expenses);
-
+		run.setPreferredSize(new Dimension(110, 20));
+		runAmountPanel.add(run);
+		
+		JDatePicker  chooseDate =  new JDatePicker ();
+		chooseDate.setPreferredSize(new Dimension(120, 20));
+		runAmountPanel.add(chooseDate);
+		
+		infoPanel.add(runAmountPanel);
+		
+		
+		JPanel gasAmountPanel = new JPanel();
+		gasAmountPanel.setPreferredSize(new Dimension(325, 24));
+		gasAmountPanel.setBackground(new Color(225, 225, 225));
+		gasAmountPanel.setLayout(new FlowLayout());
+		
+		gasExpenses = new JLabel("Расходы на заправку за текущий месяц");
+		gasExpenses.setPreferredSize(new Dimension(257, 20));
+		gasAmountPanel.add(gasExpenses);
+		
+		
+		gasAmountExpenses = new JLabel();
+		gasAmountExpenses.setFont(new Font("Tahoma", Font.BOLD, 12));
+		gasAmountExpenses.setText("157");
+		gasAmountExpenses.setForeground(new Color(0, 0, 255));
+		gasAmountExpenses.setPreferredSize(new Dimension(35, 20));
+		gasAmountPanel.add(gasAmountExpenses);
+		
+		gasExpensesMoney = new JLabel("р");
+		gasExpensesMoney.setPreferredSize(new Dimension(10, 20));
+		gasAmountPanel.add(gasExpensesMoney);
+		
+		infoPanel.add(gasAmountPanel);
+		
+		JPanel oilReminderPanel = new JPanel();
+		oilReminderPanel.setPreferredSize(new Dimension(325, 24));
+		oilReminderPanel.setBackground(new Color(225, 225, 225));
+		oilReminderPanel.setLayout(new FlowLayout());
+		
 		oil = new JLabel("Пробег после замены масла");
-		oil.setForeground(new Color(0, 0, 160));
-		oil.setPreferredSize(new Dimension(450, 20));
-		infoPanel.add(oil);
+		oil.setPreferredSize(new Dimension(247, 20));
+		oilReminderPanel.add(oil);
+		
+		oilReminderRun = new JLabel();
+		oilReminderRun.setFont(new Font("Tahoma", Font.BOLD, 12));
+		oilReminderRun.setText("8756");
+		oilReminderRun.setForeground(new Color(0, 0, 255));
+		oilReminderRun.setPreferredSize(new Dimension(40, 20));
+		oilReminderPanel.add(oilReminderRun);
+		
+		oilReminderValue = new JLabel("км");
+		oilReminderValue.setPreferredSize(new Dimension(16, 20));
+		oilReminderPanel.add(oilReminderValue);
+				
+		infoPanel.add(oilReminderPanel);
 
 		remind = new JLabel("Напоминания:");
-		remind.setForeground(new Color(0, 0, 160));
-		remind.setPreferredSize(new Dimension(450, 20));
+		remind.setPreferredSize(new Dimension(310, 20));
 		infoPanel.add(remind);
 
 		myList = new JList();
 		myScrollpane = new JScrollPane(myList);
-		myScrollpane.setPreferredSize(new Dimension(450, 70));
+		myScrollpane.setPreferredSize(new Dimension(310, 100));
 		myList.setLayoutOrientation(JList.VERTICAL);
 		listModel = new DefaultListModel();
 		infoPanel.add(myScrollpane);
-
-		frame.setResizable(false);
 		frame.setVisible(true);
-
 	}
 
 	public OpenNewWindowController getOpenController() {
@@ -320,11 +347,11 @@ public class Window extends JFrame {
 	}
 
 	public JLabel getExpenses() {
-		return expenses;
+		return gasExpenses;
 	}
 
 	public void setExpenses(JLabel expenses) {
-		this.expenses = expenses;
+		this.gasExpenses = expenses;
 	}
 
 	public JLabel getOil() {
