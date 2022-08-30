@@ -2,19 +2,10 @@ package view;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Component;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
-import java.awt.Graphics;
-import java.awt.image.BufferedImage;
-import java.awt.image.RenderedImage;
-import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
-
-import javax.imageio.ImageIO;
-import javax.swing.BoxLayout;
 import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -24,19 +15,15 @@ import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
+import controller.OpenCarWindowController;
 import controller.OpenNewWindowController;
 import java.awt.Font;
-import javax.swing.JSeparator;
-
-import org.jdatepicker.DatePicker;
 import org.jdatepicker.JDatePicker;
-
-import java.awt.event.MouseMotionAdapter;
-import java.awt.event.MouseEvent;
 
 public class Window extends JFrame {
 
 	private OpenNewWindowController openController;
+	private OpenCarWindowController openCarWindowController;
 //	private ReadController readController;
 
 	private JButton gasButton = new JButton(new ImageIcon(getClass().getClassLoader().getResource(("gas.jpg"))));
@@ -86,8 +73,8 @@ public class Window extends JFrame {
 		gasButton.setBorderPainted(false);
 		gasButton.setFocusPainted(false);
 		gasButton.setContentAreaFilled(false);
-		gasButton.setName("Заправки");
-		JLabel gasLabel = new JLabel("Заправки");
+		gasButton.setName("Заправка");
+		JLabel gasLabel = new JLabel("Заправка");
 		gasPanel.add(gasButton);
 		gasPanel.add(gasLabel);
 		container.add(gasPanel);
@@ -98,8 +85,8 @@ public class Window extends JFrame {
 		expensesButton.setBorderPainted(false);
 		expensesButton.setFocusPainted(true);
 		expensesButton.setContentAreaFilled(false);
-		expensesButton.setName("Расходы");
-		JLabel expensesLabel = new JLabel("Расходы");
+		expensesButton.setName("Расход");
+		JLabel expensesLabel = new JLabel("Расход");
 		expensesPanel.add(expensesButton);
 		expensesPanel.add(expensesLabel);
 		container.add(expensesPanel);
@@ -110,8 +97,8 @@ public class Window extends JFrame {
 		tasksButton.setBorderPainted(false);
 		tasksButton.setFocusPainted(true);
 		tasksButton.setContentAreaFilled(false);
-		tasksButton.setName("Задачи");
-		JLabel tasksLabel = new JLabel("Задачи");
+		tasksButton.setName("Задача");
+		JLabel tasksLabel = new JLabel("Задача");
 		tasksPanel.add(tasksButton);
 		tasksPanel.add(tasksLabel);
 		container.add(tasksPanel);
@@ -251,11 +238,69 @@ public class Window extends JFrame {
 		tasksButton.addActionListener(openController);
 		oilButton.addActionListener(openController);
 		carwashButton.addActionListener(openController);
-		carButton.addActionListener(openController);
 		addgasButton.addActionListener(openController);
 		addexpenseButton.addActionListener(openController);
 		addtaskButton.addActionListener(openController);
 
+	}
+	
+	
+
+	public OpenCarWindowController getOpenCarWindowController() {
+		return openCarWindowController;
+	}
+
+	public void setOpenCarWindowController(OpenCarWindowController openCarWindowController) {
+		this.openCarWindowController = openCarWindowController;
+		carButton.addActionListener(openCarWindowController);
+	}
+
+	public JLabel getGasExpenses() {
+		return gasExpenses;
+	}
+
+	public void setGasExpenses(JLabel gasExpenses) {
+		this.gasExpenses = gasExpenses;
+	}
+
+	public JLabel getRunAmount() {
+		return runAmount;
+	}
+
+	public void setRunAmount(JLabel runAmount) {
+		this.runAmount = runAmount;
+	}
+
+	public JLabel getGasAmountExpenses() {
+		return gasAmountExpenses;
+	}
+
+	public void setGasAmountExpenses(JLabel gasAmountExpenses) {
+		this.gasAmountExpenses = gasAmountExpenses;
+	}
+
+	public JLabel getGasExpensesMoney() {
+		return gasExpensesMoney;
+	}
+
+	public void setGasExpensesMoney(JLabel gasExpensesMoney) {
+		this.gasExpensesMoney = gasExpensesMoney;
+	}
+
+	public JLabel getOilReminderRun() {
+		return oilReminderRun;
+	}
+
+	public void setOilReminderRun(JLabel oilReminderRun) {
+		this.oilReminderRun = oilReminderRun;
+	}
+
+	public JLabel getOilReminderValue() {
+		return oilReminderValue;
+	}
+
+	public void setOilReminderValue(JLabel oilReminderValue) {
+		this.oilReminderValue = oilReminderValue;
 	}
 
 	public JButton getGasButton() {

@@ -1,10 +1,8 @@
 package view;
 
-import java.awt.Color;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 import javax.swing.DefaultListModel;
@@ -35,7 +33,7 @@ public class ListWindow extends JFrame {
 	private DefaultListModel<?> listModel;
 
 	private PlainDocument runDoc;
-	private PlainDocument dateDoc;
+//	private PlainDocument dateDoc;
 	private PlainDocument priceDoc;
 
 //	private SaveController saveController;
@@ -48,6 +46,7 @@ public class ListWindow extends JFrame {
 	private JTextField nameField = new JTextField(34);
 	private JTextField runField = new JTextField(6);
 	private JTextField dateField = new JTextField(10);
+
 	private JTextField priceField = new JTextField(4);
 	private JTextField intervalField = new JTextField(7);
 	private JButton addButton = new JButton("Добавить");
@@ -57,12 +56,13 @@ public class ListWindow extends JFrame {
 	private JCheckBox checkInterval = new JCheckBox();
 	private JLabel periodically = new JLabel("Периодично");
 	private JLabel interval = new JLabel("Интервал");
+	private JDatePicker chooseDate = new JDatePicker();
 
 	public ListWindow() {
 
 		frame = new JFrame();
 		frame.setTitle("Expenses List");
-		frame.setSize(370, 373);
+		frame.setSize(370, 390);
 		// по центру
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -76,11 +76,11 @@ public class ListWindow extends JFrame {
 		listModel = new DefaultListModel();
 
 		runDoc = (PlainDocument) runField.getDocument();
-		dateDoc = (PlainDocument) dateField.getDocument();
+//		dateDoc = (PlainDocument) dateField.getDocument();
 		priceDoc = (PlainDocument) priceField.getDocument();
 
 		runDoc.setDocumentFilter(new DigitFilter());
-		dateDoc.setDocumentFilter(new DigitFilter());
+//		dateDoc.setDocumentFilter(new DigitFilter());
 		priceDoc.setDocumentFilter(new DigitFilter());
 
 		container.add(myScrollpane);
@@ -120,7 +120,6 @@ public class ListWindow extends JFrame {
 		dateLabel.setPreferredSize(new Dimension(30, 20));
 		infoPanel.add(dateLabel);
 
-		JDatePicker chooseDate = new JDatePicker();
 		chooseDate.getFormattedTextField().setFont(new Font("Tahoma", Font.PLAIN, 11));
 		chooseDate.setPreferredSize(new Dimension(104, 20));
 		infoPanel.add(chooseDate);
@@ -151,6 +150,7 @@ public class ListWindow extends JFrame {
 		JPanel intervalPanel = new JPanel();
 		intervalPanel.setPreferredSize(new Dimension(400, 25));
 		intervalPanel.setLayout(new FlowLayout());
+
 		periodically.setFont(new Font("Tahoma", Font.PLAIN, 11));
 
 		intervalPanel.add(periodically);
@@ -219,13 +219,13 @@ public class ListWindow extends JFrame {
 		this.runDoc = runDoc;
 	}
 
-	public PlainDocument getDateDoc() {
-		return dateDoc;
-	}
-
-	public void setDateDoc(PlainDocument dateDoc) {
-		this.dateDoc = dateDoc;
-	}
+//	public PlainDocument getDateDoc() {
+//		return dateDoc;
+//	}
+//
+//	public void setDateDoc(PlainDocument dateDoc) {
+//		this.dateDoc = dateDoc;
+//	}
 
 	public PlainDocument getPriceDoc() {
 		return priceDoc;
@@ -348,6 +348,26 @@ public class ListWindow extends JFrame {
 		this.interval = interval;
 	}
 
+	public void setNameField(JTextField nameField) {
+		this.nameField = nameField;
+	}
+
+	public void setRunField(JTextField runField) {
+		this.runField = runField;
+	}
+
+	public void setDateField(JTextField dateField) {
+		this.dateField = dateField;
+	}
+
+	public void setPriceField(JTextField priceField) {
+		this.priceField = priceField;
+	}
+
+	public void setIntervalField(JTextField intervalField) {
+		this.intervalField = intervalField;
+	}
+
 	public void showMessage(String text) {
 		JOptionPane.showMessageDialog(null, text);
 	}
@@ -368,28 +388,8 @@ public class ListWindow extends JFrame {
 		if (isExists) {
 			showMessage(result.toString());
 		} else {
-			showMessage("Нет устройств");
+			showMessage("Нет расходов");
 		}
-	}
-
-	public void setNameField(JTextField nameField) {
-		this.nameField = nameField;
-	}
-
-	public void setRunField(JTextField runField) {
-		this.runField = runField;
-	}
-
-	public void setDateField(JTextField dateField) {
-		this.dateField = dateField;
-	}
-
-	public void setPriceField(JTextField priceField) {
-		this.priceField = priceField;
-	}
-
-	public void setIntervalField(JTextField intervalField) {
-		this.intervalField = intervalField;
 	}
 
 }
