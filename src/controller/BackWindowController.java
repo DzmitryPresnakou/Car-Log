@@ -6,6 +6,8 @@ public class BackWindowController extends BaseController {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		
+		gasWindow.getFrame().setVisible(false);
 		listWindow.getFrame().setVisible(false);
 		carWindow.getFrame().setVisible(false);
 		window.getFrame().setVisible(true);

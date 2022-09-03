@@ -6,26 +6,20 @@ import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.io.IOException;
-import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JList;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-
-import controller.OpenCarWindowController;
 import controller.OpenNewWindowController;
+import controller.ReadController;
+
 import java.awt.Font;
-import org.jdatepicker.JDatePicker;
 
 public class Window extends JFrame {
 
 	private OpenNewWindowController openController;
-	private OpenCarWindowController openCarWindowController;
-//	private ReadController readController;
-
+	private ReadController readController;
 	private JButton gasButton = new JButton(new ImageIcon(getClass().getClassLoader().getResource(("gas.jpg"))));
 	private JButton expensesButton = new JButton(
 			new ImageIcon(getClass().getClassLoader().getResource(("expenses.jpg"))));
@@ -34,32 +28,26 @@ public class Window extends JFrame {
 	private JButton carwashButton = new JButton(
 			new ImageIcon(getClass().getClassLoader().getResource(("carwash.jpg"))));
 	private JButton carButton = new JButton(new ImageIcon(getClass().getClassLoader().getResource(("car.jpg"))));
-	private JButton addgasButton = new JButton(new ImageIcon(getClass().getClassLoader().getResource(("addgas.jpg"))));
-	private JButton addexpenseButton = new JButton(
-			new ImageIcon(getClass().getClassLoader().getResource(("addexpense.jpg"))));
-	private JButton addtaskButton = new JButton(
-			new ImageIcon(getClass().getClassLoader().getResource(("addtask.jpg"))));
-
 	private JFrame frame;
-
 	private JLabel run;
 	private JLabel gasExpenses;
 	private JLabel oil;
-	private JLabel remind;
-	private JList myList;
-	private JScrollPane myScrollpane;
-	private DefaultListModel listModel;
 	private JLabel runAmount;
+	private JLabel date;
 	private JLabel gasAmountExpenses;
 	private JLabel gasExpensesMoney;
 	private JLabel oilReminderRun;
 	private JLabel oilReminderValue;
+	private JLabel carLabel;
+	private JLabel totalExpenses;
+	private JLabel totalAmountExpenses;
+	private JLabel totalExpensesMoney;
 
 	public Window() throws IOException {
 
 		frame = new JFrame("Car log");
 		frame.setResizable(false);
-		frame.setSize(370, 560);
+		frame.setSize(370, 470);
 		// по центру
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -109,8 +97,8 @@ public class Window extends JFrame {
 		oilButton.setBorderPainted(false);
 		oilButton.setFocusPainted(true);
 		oilButton.setContentAreaFilled(false);
-		oilButton.setName("Масло");
-		JLabel oilLabel = new JLabel("Масло");
+		oilButton.setName("Замена масла");
+		JLabel oilLabel = new JLabel("Замена масла");
 		oilPanel.add(oilButton);
 		oilPanel.add(oilLabel);
 		container.add(oilPanel);
@@ -140,90 +128,103 @@ public class Window extends JFrame {
 		container.add(carPanel);
 
 		JPanel infoPanel = new JPanel();
-		infoPanel.setPreferredSize(new Dimension(330, 225));
+		infoPanel.setPreferredSize(new Dimension(330, 126));
 		infoPanel.setBackground(new Color(225, 225, 225));
 		infoPanel.setLayout(new FlowLayout());
 
 		container.add(infoPanel, BorderLayout.SOUTH);
-		
+
 		JPanel runAmountPanel = new JPanel();
 		runAmountPanel.setPreferredSize(new Dimension(325, 24));
 		runAmountPanel.setBackground(new Color(225, 225, 225));
 		runAmountPanel.setLayout(new FlowLayout());
-		
+
 		runAmount = new JLabel();
 		runAmount.setFont(new Font("Tahoma", Font.BOLD, 12));
 		runAmount.setText("1200200");
 		runAmount.setForeground(new Color(0, 0, 255));
-		runAmount.setPreferredSize(new Dimension(58, 20));
+		runAmount.setPreferredSize(new Dimension(60, 20));
 		runAmountPanel.add(runAmount);
-		
+
 		run = new JLabel("км пробег на дату");
 		run.setPreferredSize(new Dimension(110, 20));
 		runAmountPanel.add(run);
-		
-		JDatePicker  chooseDate =  new JDatePicker ();
-		chooseDate.setPreferredSize(new Dimension(120, 20));
-		runAmountPanel.add(chooseDate);
-		
+
+		date = new JLabel();
+		date.setFont(new Font("Tahoma", Font.BOLD, 12));
+		date.setForeground(new Color(0, 0, 255));
+		date.setText(" 2022-08-31");
+		date.setPreferredSize(new Dimension(80, 20));
+
+		runAmountPanel.add(date);
+
 		infoPanel.add(runAmountPanel);
-		
-		
+
 		JPanel gasAmountPanel = new JPanel();
 		gasAmountPanel.setPreferredSize(new Dimension(325, 24));
 		gasAmountPanel.setBackground(new Color(225, 225, 225));
 		gasAmountPanel.setLayout(new FlowLayout());
-		
+
 		gasExpenses = new JLabel("Расходы на заправку за текущий месяц");
 		gasExpenses.setPreferredSize(new Dimension(257, 20));
 		gasAmountPanel.add(gasExpenses);
-		
-		
+
 		gasAmountExpenses = new JLabel();
 		gasAmountExpenses.setFont(new Font("Tahoma", Font.BOLD, 12));
 		gasAmountExpenses.setText("157");
 		gasAmountExpenses.setForeground(new Color(0, 0, 255));
 		gasAmountExpenses.setPreferredSize(new Dimension(35, 20));
 		gasAmountPanel.add(gasAmountExpenses);
-		
+
 		gasExpensesMoney = new JLabel("р");
 		gasExpensesMoney.setPreferredSize(new Dimension(10, 20));
 		gasAmountPanel.add(gasExpensesMoney);
-		
+
 		infoPanel.add(gasAmountPanel);
-		
+
+		JPanel totalExpensesPanel = new JPanel();
+		totalExpensesPanel.setPreferredSize(new Dimension(325, 24));
+		totalExpensesPanel.setBackground(new Color(225, 225, 225));
+		totalExpensesPanel.setLayout(new FlowLayout());
+
+		totalExpenses = new JLabel("Общие расходы за текущий месяц");
+		totalExpenses.setPreferredSize(new Dimension(257, 20));
+		totalExpensesPanel.add(totalExpenses);
+
+		totalAmountExpenses = new JLabel();
+		totalAmountExpenses.setFont(new Font("Tahoma", Font.BOLD, 12));
+		totalAmountExpenses.setText("157");
+		totalAmountExpenses.setForeground(new Color(0, 0, 255));
+		totalAmountExpenses.setPreferredSize(new Dimension(35, 20));
+		totalExpensesPanel.add(totalAmountExpenses);
+
+		totalExpensesMoney = new JLabel("р");
+		totalExpensesMoney.setPreferredSize(new Dimension(10, 20));
+		totalExpensesPanel.add(totalExpensesMoney);
+
+		infoPanel.add(totalExpensesPanel);
+
 		JPanel oilReminderPanel = new JPanel();
 		oilReminderPanel.setPreferredSize(new Dimension(325, 24));
 		oilReminderPanel.setBackground(new Color(225, 225, 225));
 		oilReminderPanel.setLayout(new FlowLayout());
-		
+
 		oil = new JLabel("Пробег после замены масла");
 		oil.setPreferredSize(new Dimension(247, 20));
 		oilReminderPanel.add(oil);
-		
+
 		oilReminderRun = new JLabel();
 		oilReminderRun.setFont(new Font("Tahoma", Font.BOLD, 12));
 		oilReminderRun.setText("8756");
 		oilReminderRun.setForeground(new Color(0, 0, 255));
 		oilReminderRun.setPreferredSize(new Dimension(40, 20));
 		oilReminderPanel.add(oilReminderRun);
-		
+
 		oilReminderValue = new JLabel("км");
 		oilReminderValue.setPreferredSize(new Dimension(16, 20));
 		oilReminderPanel.add(oilReminderValue);
-				
 		infoPanel.add(oilReminderPanel);
 
-		remind = new JLabel("Напоминания:");
-		remind.setPreferredSize(new Dimension(310, 20));
-		infoPanel.add(remind);
-
-		myList = new JList();
-		myScrollpane = new JScrollPane(myList);
-		myScrollpane.setPreferredSize(new Dimension(310, 100));
-		myList.setLayoutOrientation(JList.VERTICAL);
-		listModel = new DefaultListModel();
-		infoPanel.add(myScrollpane);
 		frame.setVisible(true);
 	}
 
@@ -238,21 +239,21 @@ public class Window extends JFrame {
 		tasksButton.addActionListener(openController);
 		oilButton.addActionListener(openController);
 		carwashButton.addActionListener(openController);
-		addgasButton.addActionListener(openController);
-		addexpenseButton.addActionListener(openController);
-		addtaskButton.addActionListener(openController);
-
-	}
-	
-	
-
-	public OpenCarWindowController getOpenCarWindowController() {
-		return openCarWindowController;
+		carButton.addActionListener(openController);
 	}
 
-	public void setOpenCarWindowController(OpenCarWindowController openCarWindowController) {
-		this.openCarWindowController = openCarWindowController;
-		carButton.addActionListener(openCarWindowController);
+	public ReadController getReadController() {
+		return readController;
+	}
+
+	public void setReadController(ReadController readController) {
+		this.readController = readController;
+		gasButton.addActionListener(openController);
+		expensesButton.addActionListener(openController);
+		tasksButton.addActionListener(openController);
+		oilButton.addActionListener(openController);
+		carwashButton.addActionListener(openController);
+		carButton.addActionListener(openController);
 	}
 
 	public JLabel getGasExpenses() {
@@ -297,6 +298,14 @@ public class Window extends JFrame {
 
 	public JLabel getOilReminderValue() {
 		return oilReminderValue;
+	}
+
+	public JLabel getCarLabel() {
+		return carLabel;
+	}
+
+	public void setCarLabel(String carLabel) {
+		this.carLabel.setText(carLabel);
 	}
 
 	public void setOilReminderValue(JLabel oilReminderValue) {
@@ -351,30 +360,6 @@ public class Window extends JFrame {
 		this.carButton = carButton;
 	}
 
-	public JButton getAddgasButton() {
-		return addgasButton;
-	}
-
-	public void setAddgasButton(JButton addgasButton) {
-		this.addgasButton = addgasButton;
-	}
-
-	public JButton getAddexpenseButton() {
-		return addexpenseButton;
-	}
-
-	public void setAddexpenseButton(JButton addexpenseButton) {
-		this.addexpenseButton = addexpenseButton;
-	}
-
-	public JButton getAddtaskButton() {
-		return addtaskButton;
-	}
-
-	public void setAddtaskButton(JButton addtaskButton) {
-		this.addtaskButton = addtaskButton;
-	}
-
 	public JFrame getFrame() {
 		return frame;
 	}
@@ -405,38 +390,6 @@ public class Window extends JFrame {
 
 	public void setOil(JLabel oil) {
 		this.oil = oil;
-	}
-
-	public JLabel getRemind() {
-		return remind;
-	}
-
-	public void setRemind(JLabel remind) {
-		this.remind = remind;
-	}
-
-	public JList getMyList() {
-		return myList;
-	}
-
-	public void setMyList(JList myList) {
-		this.myList = myList;
-	}
-
-	public JScrollPane getMyScrollpane() {
-		return myScrollpane;
-	}
-
-	public void setMyScrollpane(JScrollPane myScrollpane) {
-		this.myScrollpane = myScrollpane;
-	}
-
-	public DefaultListModel getListModel() {
-		return listModel;
-	}
-
-	public void setListModel(DefaultListModel listModel) {
-		this.listModel = listModel;
 	}
 
 }

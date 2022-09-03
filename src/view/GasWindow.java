@@ -5,6 +5,7 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -19,17 +20,23 @@ import javax.swing.event.ListSelectionListener;
 import javax.swing.text.PlainDocument;
 
 import org.jdatepicker.JDatePicker;
+
 import controller.AddExpenseController;
+import controller.AddGasExpenseController;
 import controller.BackWindowController;
 import controller.CloseWindowController;
 import controller.DeleteExpenseController;
-import controller.EditExpenseController;
+import controller.DeleteGasExpenseController;
+import controller.EditGasExpenseController;
+import controller.MyGasExpenseListSelectionListener;
 import controller.SaveController;
 import model.Database;
 import model.Expense;
+import model.GasExpense;
+
 import java.awt.Font;
 
-public class ListWindow extends JFrame {
+public class GasWindow extends ListWindow {
 	private JFrame frame;
 	private Database database;
 	private JList<?> myList;
@@ -38,27 +45,29 @@ public class ListWindow extends JFrame {
 
 	private PlainDocument runDoc;
 	private PlainDocument priceDoc;
+	private PlainDocument gasDoc;
 
 	private SaveController saveController;
-	private AddExpenseController addExpense;
-	private DeleteExpenseController deleteExpense;
-	private EditExpenseController editExpense;
+	private AddGasExpenseController addGasExpense;
+	private DeleteGasExpenseController deleteGasExpense;
+	private EditGasExpenseController editGasExpense;
 	private BackWindowController backWindowController;
 	private CloseWindowController closeWindowController;
 
-	private JTextField nameField = new JTextField(34);
+	private JTextField nameField = new JTextField(28);
 	private JTextField runField = new JTextField(6);
-	private JTextField dateField = new JTextField(8);
+	private JTextField dateField = new JTextField(10);
+	private JTextField gasField = new JTextField(3);
 
-	private JTextField priceField = new JTextField(3);
+	private JTextField priceField = new JTextField(4);
+	private JTextField intervalField = new JTextField(7);
 	private JButton addButton = new JButton("Добавить");
 	private JButton editButton = new JButton("Править");
 	private JButton deleteButton = new JButton("Удалить");
 	private JButton backButton = new JButton("Назад");
-	private JButton dateButton = new JButton("...");
 	private JDatePicker chooseDate = new JDatePicker();
 
-	public ListWindow() {
+	public GasWindow() {
 
 		frame = new JFrame();
 		frame.setTitle("Expenses List");
@@ -91,10 +100,15 @@ public class ListWindow extends JFrame {
 					priceField.setText(Integer.toString(price));
 					runField.setText(Integer.toString(run));
 					chooseDate.getFormattedTextField().setText(date);
+					if (newDatabase.get(index) instanceof GasExpense) {
+						int gas = newDatabase.get(index).getGas();
+						gasField.setText(Integer.toString(gas));
+					}
 				} else {
 					nameField.setText(null);
 					priceField.setText(null);
 					runField.setText(null);
+					gasField.setText(null);
 					chooseDate.getFormattedTextField().setText(null);
 				}
 			}
@@ -102,9 +116,11 @@ public class ListWindow extends JFrame {
 
 		runDoc = (PlainDocument) runField.getDocument();
 		priceDoc = (PlainDocument) priceField.getDocument();
+		gasDoc = (PlainDocument) gasField.getDocument();
 
 		runDoc.setDocumentFilter(new DigitFilter());
 		priceDoc.setDocumentFilter(new DigitFilter());
+		gasDoc.setDocumentFilter(new DigitFilter());
 
 		container.add(myScrollpane);
 
@@ -118,11 +134,16 @@ public class ListWindow extends JFrame {
 		namePanel.add(nameLabel);
 		nameField.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		namePanel.add(nameField);
+		namePanel.add(gasField);
+		JLabel volumeLabel = new JLabel("л");
+		volumeLabel.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		volumeLabel.setPreferredSize(new Dimension(10, 20));
+		namePanel.add(volumeLabel);
 
 		container.add(namePanel);
 
 		JPanel infoPanel = new JPanel();
-		infoPanel.setPreferredSize(new Dimension(360, 32));
+		infoPanel.setPreferredSize(new Dimension(360, 25));
 		infoPanel.setLayout(new FlowLayout());
 
 		JLabel runLabel = new JLabel("Пробег");
@@ -145,7 +166,6 @@ public class ListWindow extends JFrame {
 
 		chooseDate.getFormattedTextField().setFont(new Font("Tahoma", Font.PLAIN, 11));
 		chooseDate.setPreferredSize(new Dimension(111, 20));
-
 		infoPanel.add(chooseDate);
 
 		JLabel priceLabel = new JLabel("Цена");
@@ -204,6 +224,30 @@ public class ListWindow extends JFrame {
 		return myScrollpane;
 	}
 
+	public PlainDocument getRunDoc() {
+		return runDoc;
+	}
+
+	public void setRunDoc(PlainDocument runDoc) {
+		this.runDoc = runDoc;
+	}
+
+	public PlainDocument getPriceDoc() {
+		return priceDoc;
+	}
+
+	public void setPriceDoc(PlainDocument priceDoc) {
+		this.priceDoc = priceDoc;
+	}
+	
+	public PlainDocument getGasDoc() {
+		return gasDoc;
+	}
+
+	public void setGasDoc(PlainDocument gasDoc) {
+		this.gasDoc = gasDoc;
+	}
+
 	public void setMyScrollpane(JScrollPane myScrollpane) {
 		this.myScrollpane = myScrollpane;
 	}
@@ -215,31 +259,7 @@ public class ListWindow extends JFrame {
 	public void setListModel(DefaultListModel<?> listModel) {
 		this.listModel = listModel;
 	}
-
-	public PlainDocument getRunDoc() {
-		return runDoc;
-	}
-
-	public void setRunDoc(PlainDocument runDoc) {
-		this.runDoc = runDoc;
-	}
-
-	public PlainDocument getDateDoc() {
-		return priceDoc;
-	}
-
-	public void setDateDoc(PlainDocument dateDoc) {
-		this.priceDoc = dateDoc;
-	}
-
-	public PlainDocument getPriceDoc() {
-		return priceDoc;
-	}
-
-	public void setPriceDoc(PlainDocument priceDoc) {
-		this.priceDoc = priceDoc;
-	}
-
+	
 	public SaveController getSaveController() {
 		return saveController;
 	}
@@ -269,31 +289,31 @@ public class ListWindow extends JFrame {
 		frame.addWindowListener(closeWindowController);
 	}
 
-	public AddExpenseController getAddExpense() {
-		return addExpense;
+	public AddGasExpenseController getAddGasExpense() {
+		return addGasExpense;
 	}
 
-	public void setAddExpense(AddExpenseController addExpense) {
-		this.addExpense = addExpense;
-		addButton.addActionListener(addExpense);
+	public void setAddGasExpense(AddGasExpenseController addGasExpense) {
+		this.addGasExpense = addGasExpense;
+		addButton.addActionListener(addGasExpense);
 	}
 
-	public DeleteExpenseController getDeleteExpense() {
-		return deleteExpense;
+	public DeleteGasExpenseController getDeleteGasExpense() {
+		return deleteGasExpense;
 	}
 
-	public void setDeleteExpense(DeleteExpenseController deleteExpense) {
-		this.deleteExpense = deleteExpense;
-		deleteButton.addActionListener(deleteExpense);
+	public void setDeleteGasExpense(DeleteGasExpenseController deleteGasExpense) {
+		this.deleteGasExpense = deleteGasExpense;
+		deleteButton.addActionListener(deleteGasExpense);
 	}
 
-	public EditExpenseController getEditExpenseController() {
-		return editExpense;
+	public EditGasExpenseController getEditGasExpense() {
+		return editGasExpense;
 	}
 
-	public void setEditExpenseController(EditExpenseController editExpense) {
-		this.editExpense = editExpense;
-		editButton.addActionListener(editExpense);
+	public void setEditGasExpense(EditGasExpenseController editGasExpense) {
+		this.editGasExpense = editGasExpense;
+		editButton.addActionListener(editGasExpense);
 	}
 
 	public String getNameField() {
@@ -328,6 +348,14 @@ public class ListWindow extends JFrame {
 		this.priceField.setText(priceField);
 	}
 
+	public String getGasField() {
+		return gasField.getText();
+	}
+
+	public void setGasField(String gastField) {
+		this.gasField.setText(gastField);
+	}
+
 	public JButton getAddButton() {
 		return addButton;
 	}
@@ -360,16 +388,16 @@ public class ListWindow extends JFrame {
 		this.backButton = backButton;
 	}
 
+	public void showMessage(String text) {
+		JOptionPane.showMessageDialog(null, text);
+	}
+
 	public JDatePicker getChooseDate() {
 		return chooseDate;
 	}
 
 	public void setChooseDate(JDatePicker chooseDate) {
 		this.chooseDate = chooseDate;
-	}
-
-	public void showMessage(String text) {
-		JOptionPane.showMessageDialog(null, text);
 	}
 
 	public void showExpenses(ArrayList<Expense> expenses) {

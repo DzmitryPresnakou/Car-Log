@@ -7,17 +7,21 @@ public class MyCar implements Serializable {
 
 	private String name;
 	private String id;
-	private LocalDate made;
+	private String made;
 	private int tank;
 	private int run;
 
-	public MyCar(String name, String id, LocalDate made, int tank, int run) {
+	public MyCar(String name, String id, String made, int tank, int run) {
 
 		this.name = name;
 		this.id = id;
 		this.made = made;
 		this.tank = tank;
 		this.run = run;
+	}
+
+	public MyCar() {
+		
 	}
 
 	public String getName() {
@@ -36,11 +40,11 @@ public class MyCar implements Serializable {
 		this.id = id;
 	}
 
-	public LocalDate getMade() {
+	public String getMade() {
 		return made;
 	}
 
-	public void setMade(LocalDate made) {
+	public void setMade(String made) {
 		this.made = made;
 	}
 

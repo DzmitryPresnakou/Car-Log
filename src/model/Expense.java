@@ -2,16 +2,17 @@ package model;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Date;
 
 public class Expense implements Serializable {
 
-	private String name;
-	private int run;
-	private LocalDate date;
-	private int price;
-	private String type;
+	protected String name;
+	protected int run;
+	protected String date;
+	protected int price;
+	protected String type;
 
-	public Expense(String name, int run, LocalDate date, int price, String type) {
+	public Expense(String name, int run, String date, int price, String type) {
 		this.name = name;
 		this.run = run;
 		this.date = date;
@@ -35,11 +36,11 @@ public class Expense implements Serializable {
 		this.run = run;
 	}
 
-	public LocalDate getDate() {
+	public String getDate() {
 		return date;
 	}
 
-	public void setDate(LocalDate date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 
@@ -58,10 +59,19 @@ public class Expense implements Serializable {
 	public void setType(String type) {
 		this.type = type;
 	}
+	
+	public int getGas() {
+		return 0;
+		
+	}
+
+	public void setGas(int gas) {
+
+	}
 
 	@Override
 	public String toString() {
-		return name + ", run=" + run + ", date=" + date + ", price=" + price + ", type=" + type;
+		return name + " - " + price + " р, пробег: " + run + " км, " + date;
 	}
 
 }
