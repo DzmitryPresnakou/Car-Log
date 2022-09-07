@@ -4,7 +4,8 @@ import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Properties;
+
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -14,19 +15,22 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
 import javax.swing.text.PlainDocument;
 
-import org.jdatepicker.JDatePicker;
+import org.jdatepicker.impl.JDatePanelImpl;
+import org.jdatepicker.impl.JDatePickerImpl;
+import org.jdatepicker.impl.SqlDateModel;
+
 import controller.AddExpenseController;
 import controller.BackWindowController;
 import controller.CloseWindowController;
 import controller.DeleteExpenseController;
 import controller.EditExpenseController;
+import controller.MyExpenseListSelectionListener;
 import controller.SaveController;
 import model.Database;
 import model.Expense;
+
 import java.awt.Font;
 
 public class ListWindow extends JFrame {
@@ -45,6 +49,7 @@ public class ListWindow extends JFrame {
 	private EditExpenseController editExpense;
 	private BackWindowController backWindowController;
 	private CloseWindowController closeWindowController;
+	private MyExpenseListSelectionListener myExpenseListSelectionListener;
 
 	private JTextField nameField = new JTextField(34);
 	private JTextField runField = new JTextField(6);
@@ -55,8 +60,7 @@ public class ListWindow extends JFrame {
 	private JButton editButton = new JButton("Править");
 	private JButton deleteButton = new JButton("Удалить");
 	private JButton backButton = new JButton("Назад");
-	private JButton dateButton = new JButton("...");
-	private JDatePicker chooseDate = new JDatePicker();
+	private JDatePickerImpl datePicker;
 
 	public ListWindow() {
 
@@ -75,54 +79,35 @@ public class ListWindow extends JFrame {
 		myList.setLayoutOrientation(JList.VERTICAL);
 		listModel = new DefaultListModel();
 
-		myList.addListSelectionListener(new ListSelectionListener() {
-
-			@Override
-			public void valueChanged(ListSelectionEvent e) {
-				int index = myList.getSelectedIndex();
-				if (index >= 0) {
-					String type = frame.getTitle();
-					List<Expense> newDatabase = database.searchExpenseByType(type);
-					String name = newDatabase.get(index).getName();
-					String date = newDatabase.get(index).getDate();
-					int price = newDatabase.get(index).getPrice();
-					int run = newDatabase.get(index).getRun();
-					nameField.setText(name);
-					priceField.setText(Integer.toString(price));
-					runField.setText(Integer.toString(run));
-					chooseDate.getFormattedTextField().setText(date);
-				} else {
-					nameField.setText(null);
-					priceField.setText(null);
-					runField.setText(null);
-					chooseDate.getFormattedTextField().setText(null);
-				}
-			}
-		});
+		SqlDateModel model = new SqlDateModel();
+		Properties p = new Properties();
+		p.put("text.day", "Day");
+		p.put("text.month", "Month");
+		p.put("text.year", "Year");
+		JDatePanelImpl panel = new JDatePanelImpl(model, p);
+		datePicker = new JDatePickerImpl(panel, new DateLabelFormatter());
+		datePicker.getJFormattedTextField().setFont(new Font("Tahoma", Font.PLAIN, 11));
+		datePicker.setPreferredSize(new Dimension(111, 20));
 
 		runDoc = (PlainDocument) runField.getDocument();
 		priceDoc = (PlainDocument) priceField.getDocument();
-
 		runDoc.setDocumentFilter(new DigitFilter());
 		priceDoc.setDocumentFilter(new DigitFilter());
-
 		container.add(myScrollpane);
 
 		JPanel namePanel = new JPanel();
 		namePanel.setPreferredSize(new Dimension(360, 25));
 		namePanel.setLayout(new FlowLayout());
-
 		JLabel nameLabel = new JLabel("Действие");
 		nameLabel.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		nameLabel.setPreferredSize(new Dimension(54, 20));
 		namePanel.add(nameLabel);
 		nameField.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		namePanel.add(nameField);
-
 		container.add(namePanel);
 
 		JPanel infoPanel = new JPanel();
-		infoPanel.setPreferredSize(new Dimension(360, 32));
+		infoPanel.setPreferredSize(new Dimension(360, 25));
 		infoPanel.setLayout(new FlowLayout());
 
 		JLabel runLabel = new JLabel("Пробег");
@@ -130,7 +115,6 @@ public class ListWindow extends JFrame {
 		runLabel.setPreferredSize(new Dimension(40, 20));
 		infoPanel.add(runLabel);
 		runField.setFont(new Font("Tahoma", Font.PLAIN, 11));
-		runField.setText("7777777");
 		infoPanel.add(runField);
 
 		JLabel kmLabel = new JLabel("км");
@@ -143,10 +127,7 @@ public class ListWindow extends JFrame {
 		dateLabel.setPreferredSize(new Dimension(30, 20));
 		infoPanel.add(dateLabel);
 
-		chooseDate.getFormattedTextField().setFont(new Font("Tahoma", Font.PLAIN, 11));
-		chooseDate.setPreferredSize(new Dimension(111, 20));
-
-		infoPanel.add(chooseDate);
+		infoPanel.add(datePicker);
 
 		JLabel priceLabel = new JLabel("Цена");
 		priceLabel.setFont(new Font("Tahoma", Font.PLAIN, 11));
@@ -162,7 +143,6 @@ public class ListWindow extends JFrame {
 
 		container.add(infoPanel);
 		addButton.setFont(new Font("Tahoma", Font.PLAIN, 11));
-
 		container.add(addButton);
 		deleteButton.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		container.add(deleteButton);
@@ -240,6 +220,15 @@ public class ListWindow extends JFrame {
 		this.priceDoc = priceDoc;
 	}
 
+	public MyExpenseListSelectionListener getMyExpenseListSelectionListener() {
+		return myExpenseListSelectionListener;
+	}
+
+	public void setMyExpenseListSelectionListener(MyExpenseListSelectionListener myExpenseListSelectionListener) {
+		this.myExpenseListSelectionListener = myExpenseListSelectionListener;
+		myList.addListSelectionListener(myExpenseListSelectionListener);
+	}
+
 	public SaveController getSaveController() {
 		return saveController;
 	}
@@ -249,6 +238,7 @@ public class ListWindow extends JFrame {
 		addButton.addActionListener(saveController);
 		deleteButton.addActionListener(saveController);
 		editButton.addActionListener(saveController);
+		backButton.addActionListener(saveController);
 	}
 
 	public BackWindowController getBackWindowController() {
@@ -360,12 +350,12 @@ public class ListWindow extends JFrame {
 		this.backButton = backButton;
 	}
 
-	public JDatePicker getChooseDate() {
-		return chooseDate;
+	public JDatePickerImpl getDatePicker() {
+		return datePicker;
 	}
 
-	public void setChooseDate(JDatePicker chooseDate) {
-		this.chooseDate = chooseDate;
+	public void setDatePicker(JDatePickerImpl datePicker) {
+		this.datePicker = datePicker;
 	}
 
 	public void showMessage(String text) {

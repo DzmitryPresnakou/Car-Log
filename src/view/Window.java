@@ -11,15 +11,17 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+
+import controller.InfoPanelController;
 import controller.OpenNewWindowController;
 import controller.ReadController;
-
 import java.awt.Font;
 
 public class Window extends JFrame {
 
 	private OpenNewWindowController openController;
 	private ReadController readController;
+	private InfoPanelController infoPanelController;
 	private JButton gasButton = new JButton(new ImageIcon(getClass().getClassLoader().getResource(("gas.jpg"))));
 	private JButton expensesButton = new JButton(
 			new ImageIcon(getClass().getClassLoader().getResource(("expenses.jpg"))));
@@ -51,10 +53,8 @@ public class Window extends JFrame {
 		// по центру
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
 		Container container = frame.getContentPane();
 		container.setLayout(new FlowLayout());
-
 		JPanel gasPanel = new JPanel();
 		gasPanel.setPreferredSize(new Dimension(110, 140));
 		gasPanel.setLayout(new FlowLayout());
@@ -141,7 +141,6 @@ public class Window extends JFrame {
 
 		runAmount = new JLabel();
 		runAmount.setFont(new Font("Tahoma", Font.BOLD, 12));
-		runAmount.setText("1200200");
 		runAmount.setForeground(new Color(0, 0, 255));
 		runAmount.setPreferredSize(new Dimension(60, 20));
 		runAmountPanel.add(runAmount);
@@ -153,9 +152,7 @@ public class Window extends JFrame {
 		date = new JLabel();
 		date.setFont(new Font("Tahoma", Font.BOLD, 12));
 		date.setForeground(new Color(0, 0, 255));
-		date.setText(" 2022-08-31");
 		date.setPreferredSize(new Dimension(80, 20));
-
 		runAmountPanel.add(date);
 
 		infoPanel.add(runAmountPanel);
@@ -171,7 +168,6 @@ public class Window extends JFrame {
 
 		gasAmountExpenses = new JLabel();
 		gasAmountExpenses.setFont(new Font("Tahoma", Font.BOLD, 12));
-		gasAmountExpenses.setText("157");
 		gasAmountExpenses.setForeground(new Color(0, 0, 255));
 		gasAmountExpenses.setPreferredSize(new Dimension(35, 20));
 		gasAmountPanel.add(gasAmountExpenses);
@@ -193,7 +189,6 @@ public class Window extends JFrame {
 
 		totalAmountExpenses = new JLabel();
 		totalAmountExpenses.setFont(new Font("Tahoma", Font.BOLD, 12));
-		totalAmountExpenses.setText("157");
 		totalAmountExpenses.setForeground(new Color(0, 0, 255));
 		totalAmountExpenses.setPreferredSize(new Dimension(35, 20));
 		totalExpensesPanel.add(totalAmountExpenses);
@@ -201,7 +196,6 @@ public class Window extends JFrame {
 		totalExpensesMoney = new JLabel("р");
 		totalExpensesMoney.setPreferredSize(new Dimension(10, 20));
 		totalExpensesPanel.add(totalExpensesMoney);
-
 		infoPanel.add(totalExpensesPanel);
 
 		JPanel oilReminderPanel = new JPanel();
@@ -215,7 +209,6 @@ public class Window extends JFrame {
 
 		oilReminderRun = new JLabel();
 		oilReminderRun.setFont(new Font("Tahoma", Font.BOLD, 12));
-		oilReminderRun.setText("8756");
 		oilReminderRun.setForeground(new Color(0, 0, 255));
 		oilReminderRun.setPreferredSize(new Dimension(40, 20));
 		oilReminderPanel.add(oilReminderRun);
@@ -248,12 +241,12 @@ public class Window extends JFrame {
 
 	public void setReadController(ReadController readController) {
 		this.readController = readController;
-		gasButton.addActionListener(openController);
-		expensesButton.addActionListener(openController);
-		tasksButton.addActionListener(openController);
-		oilButton.addActionListener(openController);
-		carwashButton.addActionListener(openController);
-		carButton.addActionListener(openController);
+		gasButton.addActionListener(readController);
+		expensesButton.addActionListener(readController);
+		tasksButton.addActionListener(readController);
+		oilButton.addActionListener(readController);
+		carwashButton.addActionListener(readController);
+		carButton.addActionListener(readController);
 	}
 
 	public JLabel getGasExpenses() {
@@ -268,8 +261,8 @@ public class Window extends JFrame {
 		return runAmount;
 	}
 
-	public void setRunAmount(JLabel runAmount) {
-		this.runAmount = runAmount;
+	public void setRunAmount(String runAmount) {
+		this.runAmount.setText(runAmount);
 	}
 
 	public JLabel getGasAmountExpenses() {
@@ -278,6 +271,14 @@ public class Window extends JFrame {
 
 	public void setGasAmountExpenses(JLabel gasAmountExpenses) {
 		this.gasAmountExpenses = gasAmountExpenses;
+	}
+
+	public JLabel getTotalAmountExpenses() {
+		return totalAmountExpenses;
+	}
+
+	public void setTotalAmountExpenses(JLabel totalAmountExpenses) {
+		this.totalAmountExpenses = totalAmountExpenses;
 	}
 
 	public JLabel getGasExpensesMoney() {
@@ -392,4 +393,21 @@ public class Window extends JFrame {
 		this.oil = oil;
 	}
 
+	public JLabel getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date.setText(date);
+	}
+
+	public InfoPanelController getInfoPanelController() {
+		return infoPanelController;
+	}
+
+	public void setInfoPanelController(InfoPanelController infoPanelController) {
+		this.infoPanelController = infoPanelController;
+		frame.addWindowListener(infoPanelController);
+
+	}
 }

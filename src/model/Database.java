@@ -3,15 +3,16 @@ package model;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
+
+import org.apache.log4j.Logger;
 
 public class Database implements Serializable {
 
+	private final static Logger LOGGER = Logger.getLogger(Database.class);
 	private List<Expense> generalDB = new ArrayList<>();
 
 	public Database() {
-
 	}
 
 	public Database(List<Expense> generalDB) {
@@ -27,21 +28,44 @@ public class Database implements Serializable {
 	}
 
 	public void addExpense(Expense expense) {
+		LOGGER.debug("method \"addExpense\" called");
 		generalDB.add(expense);
 	}
 
 	public boolean deleteExpense(int index) {
+		LOGGER.debug("method \"deleteExpense by index\" called");
 		boolean isDeleted = false;
 		generalDB.remove(index);
 		isDeleted = true;
 		return isDeleted;
 	}
 
-	public boolean deleteExpense(String name, int run) {
+	public boolean deleteExpense(String name, int run, LocalDate date, int price, String type) {
+		LOGGER.debug("method \"deleteExpense by all fields\" called");
 		boolean isDeleted = false;
 		for (int i = 0; i < generalDB.size(); i++) {
 			if (generalDB.get(i) != null && generalDB.get(i).getName() != null && generalDB.get(i).getRun() != 0
-					&& generalDB.get(i).getName().equals(name) && generalDB.get(i).getRun() == run) {
+					&& generalDB.get(i).getDate() != null && generalDB.get(i).getPrice() != 0
+					&& generalDB.get(i).getType() != null && generalDB.get(i).getName().equals(name)
+					&& generalDB.get(i).getRun() == run && generalDB.get(i).getDate().equals(date)
+					&& generalDB.get(i).getPrice() == price && generalDB.get(i).getType().equals(type)) {
+				generalDB.remove(i);
+				isDeleted = true;
+			}
+		}
+		return isDeleted;
+	}
+
+	public boolean deleteGasExpense(String name, int run, LocalDate date, int price, String type, int gas) {
+		LOGGER.debug("method \"deleteGasExpense by all fields\" called");
+		boolean isDeleted = false;
+		for (int i = 0; i < generalDB.size(); i++) {
+			if (generalDB.get(i) != null && generalDB.get(i).getName() != null && generalDB.get(i).getRun() != 0
+					&& generalDB.get(i).getDate() != null && generalDB.get(i).getPrice() != 0
+					&& generalDB.get(i).getType() != null && generalDB.get(i).getGas() != 0
+					&& generalDB.get(i).getName().equals(name) && generalDB.get(i).getRun() == run
+					&& generalDB.get(i).getDate().equals(date) && generalDB.get(i).getPrice() == price
+					&& generalDB.get(i).getType().equals(type) && generalDB.get(i).getGas() == gas) {
 				generalDB.remove(i);
 				isDeleted = true;
 			}
@@ -50,24 +74,64 @@ public class Database implements Serializable {
 	}
 
 	public Expense showExpense(int index) {
+		LOGGER.debug("method \"showExpense\" called");
 		return generalDB.get(index);
 	}
 
-	public List<Expense> editExpense(int dbIndex, String newName, int newRun, String newDate, int newPrice,
+	public Expense showExpenseByRun(int run) {
+		LOGGER.debug("method \"showExpenseByRun\" called");
+		Expense answer = new Expense();
+		for (int i = 0; i < generalDB.size(); i++) {
+			if (generalDB.get(i).getRun() == run) {
+				answer = generalDB.get(i);
+			}
+		}
+		return answer;
+	}
+
+	public int showTheGreatestValueOfRun() {
+		LOGGER.debug("method \"showTheGreatestValueOfRun\" called");
+		int maxValueOfRun = 0;
+		for (int i = 0; i < generalDB.size(); i++) {
+			if (generalDB.get(i) != null && generalDB.get(i).getRun() != 0 && generalDB.get(i).getDate() != null
+					&& generalDB.get(i).getRun() > maxValueOfRun) {
+
+				maxValueOfRun = generalDB.get(i).getRun();
+			}
+		}
+		return maxValueOfRun;
+	}
+
+	public int showTheGreatestValueOfRunByType(String type) {
+		LOGGER.debug("method \"showTheGreatestValueOfRunByType\" called");
+		int maxValueOfRun = 0;
+		for (int i = 0; i < generalDB.size(); i++) {
+			if (generalDB.get(i) != null && generalDB.get(i).getRun() != 0 && generalDB.get(i).getType() != null
+					&& generalDB.get(i).getType().equalsIgnoreCase(type) && generalDB.get(i).getRun() > maxValueOfRun) {
+				maxValueOfRun = generalDB.get(i).getRun();
+			}
+		}
+		return maxValueOfRun;
+	}
+
+	public List<Expense> editExpense(int dbIndex, String newName, int newRun, LocalDate newDate, int newPrice,
 			String type) {
+		LOGGER.debug("method \"editExpense\" called");
 		Expense newExpense = new Expense(newName, newRun, newDate, newPrice, type);
 		generalDB.set(dbIndex, newExpense);
 		return generalDB;
 	}
-	
-	public List<Expense> editGasExpense(int dbIndex, String newName, int newRun, String newDate, int newPrice,
+
+	public List<Expense> editGasExpense(int dbIndex, String newName, int newRun, LocalDate newDate, int newPrice,
 			String type, int newGas) {
-		Expense newExpense = new GasExpense(newName, newRun, newDate, newPrice, type,  newGas);
+		LOGGER.debug("method \"editGasExpense\" called");
+		Expense newExpense = new GasExpense(newName, newRun, newDate, newPrice, type, newGas);
 		generalDB.set(dbIndex, newExpense);
 		return generalDB;
 	}
 
 	public List<Expense> searchExpenseByType(String type) {
+		LOGGER.debug("method \"searchExpenseByType\" called");
 		List<Expense> answer = new ArrayList<>();
 		for (Expense expense : generalDB) {
 			if (expense.getType().equals(type)) {
@@ -77,32 +141,25 @@ public class Database implements Serializable {
 		return answer;
 	}
 
-	public boolean searchExpenseByNameAndPrice(String name, int price) {
+	public boolean searchExpenseByNameRunDatePriceType(String name, int run, LocalDate date, int price, String type) {
+		LOGGER.debug("method \"searchExpenseByNameRunDatePriceType\" called");
 		boolean isFound = false;
 		for (Expense expense : generalDB) {
-			if (expense.getName().equals(name) && expense.getPrice() == price) {
+			if (expense.getName().equals(name) && expense.getRun() == run && expense.getDate().equals(date)
+					&& expense.getPrice() == price && expense.getType().equals(type)) {
 				isFound = true;
 			}
 		}
 		return isFound;
 	}
 
-	public boolean searchExpenseByNameRunDatePrice(String name, int run, String date, int price) {
+	public boolean searchExpenseByNameRunDatePriceTypeGas(String name, int run, LocalDate date, int price, String type,
+			int gas) {
+		LOGGER.debug("method \"searchExpenseByNameRunDatePriceGas\" called");
 		boolean isFound = false;
 		for (Expense expense : generalDB) {
 			if (expense.getName().equals(name) && expense.getRun() == run && expense.getDate().equals(date)
-					&& expense.getPrice() == price) {
-				isFound = true;
-			}
-		}
-		return isFound;
-	}
-
-	public boolean searchExpenseByNameRunDatePriceGas(String name, int run, String date, int price, int gas) {
-		boolean isFound = false;
-		for (Expense expense : generalDB) {
-			if (expense.getName().equals(name) && expense.getRun() == run && expense.getDate().equals(date)
-					&& expense.getPrice() == price && expense.getGas() == gas) {
+					&& expense.getPrice() == price && expense.getType().equals(type) && expense.getGas() == gas) {
 				isFound = true;
 			}
 		}
@@ -110,6 +167,7 @@ public class Database implements Serializable {
 	}
 
 	public boolean searchExpenseByNameAndRun(String name, int run) {
+		LOGGER.debug("method \"searchExpenseByNameAndRun\" called");
 		boolean isFound = false;
 		for (Expense expense : generalDB) {
 			if (expense.getName().equals(name) && expense.getRun() == run) {
@@ -120,6 +178,7 @@ public class Database implements Serializable {
 	}
 
 	public int findExpenseByNameAndPrice(String name, int price) {
+		LOGGER.debug("method \"findExpenseByNameAndPrice\" called");
 		int index = -1;
 		for (int i = 0; i < generalDB.size(); i++) {
 			if (generalDB.get(i).getName().equals(name) && generalDB.get(i).getPrice() == price) {
@@ -130,6 +189,7 @@ public class Database implements Serializable {
 	}
 
 	public int findExpenseByNameAndRun(String name, int run) {
+		LOGGER.debug("method \"findExpenseByNameAndRun\" called");
 		int index = -1;
 		for (int i = 0; i < generalDB.size(); i++) {
 			if (generalDB.get(i).getName().equals(name) && generalDB.get(i).getRun() == run) {
@@ -140,6 +200,7 @@ public class Database implements Serializable {
 	}
 
 	public int findExpenseByNameAndRunAndPrice(String name, int run, int price) {
+		LOGGER.debug("method \"findExpenseByNameAndRunAndPrice\" called");
 		int index = -1;
 		for (int i = 0; i < generalDB.size(); i++) {
 			if (generalDB.get(i).getName().equals(name) && generalDB.get(i).getRun() == run
@@ -151,6 +212,7 @@ public class Database implements Serializable {
 	}
 
 	public int findExpenseByNameAndRunAndPriceGas(String name, int run, int price, int gas) {
+		LOGGER.debug("method \"findExpenseByNameAndRunAndPriceGas\" called");
 		int index = -1;
 		for (int i = 0; i < generalDB.size(); i++) {
 			if (generalDB.get(i).getName().equals(name) && generalDB.get(i).getRun() == run
@@ -161,4 +223,32 @@ public class Database implements Serializable {
 		return index;
 	}
 
+	public int sumExpensesPerMonthByType(String type) {
+		LOGGER.debug("method \"sumExpensesPerMonthByType\" called");
+		LocalDate today = LocalDate.now();
+		int sum = 0;
+		int price;
+		for (int i = 0; i < generalDB.size(); i++) {
+			if (generalDB.get(i).getType().equals(type)
+					&& generalDB.get(i).getDate().getMonth().equals(today.getMonth())) {
+				price = generalDB.get(i).getPrice();
+				sum += price;
+			}
+		}
+		return sum;
+	}
+
+	public int sumAllExpensesPerMonth() {
+		LOGGER.debug("method \"sumAllExpensesPerMonth\" called");
+		LocalDate today = LocalDate.now();
+		int sum = 0;
+		int price;
+		for (int i = 0; i < generalDB.size(); i++) {
+			if (generalDB.get(i).getDate().getMonth().equals(today.getMonth())) {
+				price = generalDB.get(i).getPrice();
+				sum += price;
+			}
+		}
+		return sum;
+	}
 }

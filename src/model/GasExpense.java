@@ -6,7 +6,7 @@ public class GasExpense extends Expense {
 
 	protected int gas;
 
-	public GasExpense(String name, int run, String date, int price, String type, int gas) {
+	public GasExpense(String name, int run, LocalDate date, int price, String type, int gas) {
 		super(name, run, date, price, type);
 		this.gas = gas;
 	}

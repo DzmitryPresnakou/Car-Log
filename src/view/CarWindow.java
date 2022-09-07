@@ -1,5 +1,6 @@
 package view;
 
+import java.awt.Color;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -13,6 +14,8 @@ import javax.swing.JTextField;
 import javax.swing.text.PlainDocument;
 import controller.BackWindowController;
 import controller.CloseWindowController;
+import controller.InfoPanelController;
+import controller.ReadCarController;
 import controller.SaveCarController;
 import model.MyCar;
 
@@ -22,6 +25,8 @@ public class CarWindow extends JFrame {
 	private BackWindowController backWindowController;
 	private CloseWindowController closeWindowController;
 	private SaveCarController saveCarController;
+	private ReadCarController readCarController;
+	private InfoPanelController infoPanelController;
 
 	private PlainDocument runDoc;
 	private PlainDocument tankDoc;
@@ -33,6 +38,7 @@ public class CarWindow extends JFrame {
 	private JTextField madeField = new JTextField(10);
 	private JTextField tankField = new JTextField(3);
 	private JTextField runField = new JTextField(8);
+	private JLabel runAmount = new JLabel();
 
 	private JButton saveButton = new JButton("Сохранить");
 	private JButton backButton = new JButton("Назад");
@@ -114,15 +120,20 @@ public class CarWindow extends JFrame {
 		runLabel.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		runLabel.setPreferredSize(new Dimension(78, 20));
 		runPanel.add(runLabel);
-		runField.setFont(new Font("Tahoma", Font.PLAIN, 11));
-		runPanel.add(runField);
+		runAmount.setFont(new Font("Tahoma", Font.BOLD, 12));
+		runAmount.setForeground(new Color(0, 0, 255));
+		runAmount.setPreferredSize(new Dimension(60, 20));
+		runPanel.add(runAmount);
+//		runField.setFont(new Font("Tahoma", Font.PLAIN, 11));
+
+//		runPanel.add(runField);
 
 		JLabel kilometerLabel = new JLabel("км");
 		kilometerLabel.setFont(new Font("Tahoma", Font.PLAIN, 10));
 		kilometerLabel.setPreferredSize(new Dimension(15, 20));
 		runPanel.add(kilometerLabel);
 		container.add(runPanel);
-		
+
 		runDoc = (PlainDocument) runField.getDocument();
 		tankDoc = (PlainDocument) tankField.getDocument();
 		madeDoc = (PlainDocument) madeField.getDocument();
@@ -147,6 +158,14 @@ public class CarWindow extends JFrame {
 	public void setFrame(JFrame frame) {
 		this.frame = frame;
 	}
+	
+	public String getRunAmount() {
+		return runAmount.getText();
+	}
+
+	public void setRunAmount(String string) {
+		this.runAmount.setText(string);
+	}
 
 	public BackWindowController getBackWindowController() {
 		return backWindowController;
@@ -166,7 +185,6 @@ public class CarWindow extends JFrame {
 		frame.addWindowListener(closeWindowController);
 	}
 
-		
 	public SaveCarController getSaveCarController() {
 		return saveCarController;
 	}
@@ -174,6 +192,24 @@ public class CarWindow extends JFrame {
 	public void setSaveCarController(SaveCarController saveCarController) {
 		this.saveCarController = saveCarController;
 		saveButton.addActionListener(saveCarController);
+	}
+	
+	public ReadCarController getReadCarController() {
+		return readCarController;
+	}
+
+	public void setReadCarController(ReadCarController readCarController) {
+		this.readCarController = readCarController;
+		frame.addWindowListener(readCarController);
+	}
+	
+	public InfoPanelController getInfoPanelController() {
+		return infoPanelController;
+	}
+
+	public void setInfoPanelController(InfoPanelController infoPanelController) {
+		this.infoPanelController = infoPanelController;
+		frame.addWindowListener(infoPanelController);
 	}
 
 	public void setNameField(JTextField nameField) {
@@ -210,6 +246,14 @@ public class CarWindow extends JFrame {
 
 	public void setTankDoc(PlainDocument tankDoc) {
 		this.tankDoc = tankDoc;
+	}
+
+	public PlainDocument getMadeDoc() {
+		return madeDoc;
+	}
+
+	public void setMadeDoc(PlainDocument madeDoc) {
+		this.madeDoc = madeDoc;
 	}
 
 	public String getNameField() {
@@ -267,7 +311,7 @@ public class CarWindow extends JFrame {
 	public void setBackButton(JButton backButton) {
 		this.backButton = backButton;
 	}
-		
+
 	public MyCar getMyCar() {
 		return myCar;
 	}
@@ -287,5 +331,4 @@ public class CarWindow extends JFrame {
 	public void showMessage(String text) {
 		JOptionPane.showMessageDialog(null, text);
 	}
-
 }

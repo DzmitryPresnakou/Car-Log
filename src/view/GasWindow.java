@@ -4,7 +4,7 @@ import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Properties;
 
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
@@ -15,25 +15,21 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
 import javax.swing.text.PlainDocument;
 
-import org.jdatepicker.JDatePicker;
+import org.jdatepicker.impl.JDatePanelImpl;
+import org.jdatepicker.impl.JDatePickerImpl;
+import org.jdatepicker.impl.SqlDateModel;
 
-import controller.AddExpenseController;
 import controller.AddGasExpenseController;
 import controller.BackWindowController;
 import controller.CloseWindowController;
-import controller.DeleteExpenseController;
 import controller.DeleteGasExpenseController;
 import controller.EditGasExpenseController;
 import controller.MyGasExpenseListSelectionListener;
 import controller.SaveController;
 import model.Database;
 import model.Expense;
-import model.GasExpense;
-
 import java.awt.Font;
 
 public class GasWindow extends ListWindow {
@@ -53,6 +49,7 @@ public class GasWindow extends ListWindow {
 	private EditGasExpenseController editGasExpense;
 	private BackWindowController backWindowController;
 	private CloseWindowController closeWindowController;
+	private MyGasExpenseListSelectionListener myGasExpenseListSelectionListener;
 
 	private JTextField nameField = new JTextField(28);
 	private JTextField runField = new JTextField(6);
@@ -60,12 +57,11 @@ public class GasWindow extends ListWindow {
 	private JTextField gasField = new JTextField(3);
 
 	private JTextField priceField = new JTextField(4);
-	private JTextField intervalField = new JTextField(7);
 	private JButton addButton = new JButton("Добавить");
 	private JButton editButton = new JButton("Править");
 	private JButton deleteButton = new JButton("Удалить");
 	private JButton backButton = new JButton("Назад");
-	private JDatePicker chooseDate = new JDatePicker();
+	private JDatePickerImpl datePicker;
 
 	public GasWindow() {
 
@@ -84,44 +80,22 @@ public class GasWindow extends ListWindow {
 		myList.setLayoutOrientation(JList.VERTICAL);
 		listModel = new DefaultListModel();
 
-		myList.addListSelectionListener(new ListSelectionListener() {
-
-			@Override
-			public void valueChanged(ListSelectionEvent e) {
-				int index = myList.getSelectedIndex();
-				if (index >= 0) {
-					String type = frame.getTitle();
-					List<Expense> newDatabase = database.searchExpenseByType(type);
-					String name = newDatabase.get(index).getName();
-					String date = newDatabase.get(index).getDate();
-					int price = newDatabase.get(index).getPrice();
-					int run = newDatabase.get(index).getRun();
-					nameField.setText(name);
-					priceField.setText(Integer.toString(price));
-					runField.setText(Integer.toString(run));
-					chooseDate.getFormattedTextField().setText(date);
-					if (newDatabase.get(index) instanceof GasExpense) {
-						int gas = newDatabase.get(index).getGas();
-						gasField.setText(Integer.toString(gas));
-					}
-				} else {
-					nameField.setText(null);
-					priceField.setText(null);
-					runField.setText(null);
-					gasField.setText(null);
-					chooseDate.getFormattedTextField().setText(null);
-				}
-			}
-		});
+		SqlDateModel model = new SqlDateModel();
+		Properties p = new Properties();
+		p.put("text.day", "Day");
+		p.put("text.month", "Month");
+		p.put("text.year", "Year");
+ 		JDatePanelImpl panel = new JDatePanelImpl(model, p);
+		datePicker = new JDatePickerImpl(panel, new DateLabelFormatter());
+		datePicker.getJFormattedTextField().setFont(new Font("Tahoma", Font.PLAIN, 11));
+		datePicker.setPreferredSize(new Dimension(111, 20));
 
 		runDoc = (PlainDocument) runField.getDocument();
 		priceDoc = (PlainDocument) priceField.getDocument();
 		gasDoc = (PlainDocument) gasField.getDocument();
-
 		runDoc.setDocumentFilter(new DigitFilter());
 		priceDoc.setDocumentFilter(new DigitFilter());
 		gasDoc.setDocumentFilter(new DigitFilter());
-
 		container.add(myScrollpane);
 
 		JPanel namePanel = new JPanel();
@@ -139,7 +113,6 @@ public class GasWindow extends ListWindow {
 		volumeLabel.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		volumeLabel.setPreferredSize(new Dimension(10, 20));
 		namePanel.add(volumeLabel);
-
 		container.add(namePanel);
 
 		JPanel infoPanel = new JPanel();
@@ -151,7 +124,6 @@ public class GasWindow extends ListWindow {
 		runLabel.setPreferredSize(new Dimension(40, 20));
 		infoPanel.add(runLabel);
 		runField.setFont(new Font("Tahoma", Font.PLAIN, 11));
-		runField.setText("7777777");
 		infoPanel.add(runField);
 
 		JLabel kmLabel = new JLabel("км");
@@ -163,10 +135,7 @@ public class GasWindow extends ListWindow {
 		dateLabel.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		dateLabel.setPreferredSize(new Dimension(30, 20));
 		infoPanel.add(dateLabel);
-
-		chooseDate.getFormattedTextField().setFont(new Font("Tahoma", Font.PLAIN, 11));
-		chooseDate.setPreferredSize(new Dimension(111, 20));
-		infoPanel.add(chooseDate);
+		infoPanel.add(datePicker);
 
 		JLabel priceLabel = new JLabel("Цена");
 		priceLabel.setFont(new Font("Tahoma", Font.PLAIN, 11));
@@ -179,10 +148,8 @@ public class GasWindow extends ListWindow {
 		bynLabel.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		bynLabel.setPreferredSize(new Dimension(10, 20));
 		infoPanel.add(bynLabel);
-
 		container.add(infoPanel);
 		addButton.setFont(new Font("Tahoma", Font.PLAIN, 11));
-
 		container.add(addButton);
 		deleteButton.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		container.add(deleteButton);
@@ -239,7 +206,7 @@ public class GasWindow extends ListWindow {
 	public void setPriceDoc(PlainDocument priceDoc) {
 		this.priceDoc = priceDoc;
 	}
-	
+
 	public PlainDocument getGasDoc() {
 		return gasDoc;
 	}
@@ -259,7 +226,25 @@ public class GasWindow extends ListWindow {
 	public void setListModel(DefaultListModel<?> listModel) {
 		this.listModel = listModel;
 	}
-	
+
+	public JDatePickerImpl getDatePicker() {
+		return datePicker;
+	}
+
+	public void setDatePicker(JDatePickerImpl datePicker) {
+		this.datePicker = datePicker;
+	}
+
+	public MyGasExpenseListSelectionListener getMyGasExpenseListSelectionListener() {
+		return myGasExpenseListSelectionListener;
+	}
+
+	public void setMyGasExpenseListSelectionListener(
+			MyGasExpenseListSelectionListener myGasExpenseListSelectionListener) {
+		this.myGasExpenseListSelectionListener = myGasExpenseListSelectionListener;
+		myList.addListSelectionListener(myGasExpenseListSelectionListener);
+	}
+
 	public SaveController getSaveController() {
 		return saveController;
 	}
@@ -269,6 +254,7 @@ public class GasWindow extends ListWindow {
 		addButton.addActionListener(saveController);
 		deleteButton.addActionListener(saveController);
 		editButton.addActionListener(saveController);
+		backButton.addActionListener(saveController);
 	}
 
 	public BackWindowController getBackWindowController() {
@@ -390,14 +376,6 @@ public class GasWindow extends ListWindow {
 
 	public void showMessage(String text) {
 		JOptionPane.showMessageDialog(null, text);
-	}
-
-	public JDatePicker getChooseDate() {
-		return chooseDate;
-	}
-
-	public void setChooseDate(JDatePicker chooseDate) {
-		this.chooseDate = chooseDate;
 	}
 
 	public void showExpenses(ArrayList<Expense> expenses) {

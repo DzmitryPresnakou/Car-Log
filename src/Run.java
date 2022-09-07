@@ -1,7 +1,5 @@
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import org.apache.log4j.Logger;
 
 import controller.AddExpenseController;
 import controller.AddGasExpenseController;
@@ -11,15 +9,15 @@ import controller.DeleteExpenseController;
 import controller.DeleteGasExpenseController;
 import controller.EditExpenseController;
 import controller.EditGasExpenseController;
+import controller.InfoPanelController;
 import controller.MyExpenseListSelectionListener;
 import controller.MyGasExpenseListSelectionListener;
 import controller.OpenNewWindowController;
+import controller.ReadCarController;
 import controller.ReadController;
 import controller.SaveCarController;
 import controller.SaveController;
 import model.Database;
-import model.Expense;
-import model.GasExpense;
 import model.MyCar;
 import view.ListWindow;
 import view.CarWindow;
@@ -27,12 +25,17 @@ import view.GasWindow;
 import view.Window;
 
 public class Run {
+	
+	private final static Logger LOGGER = Logger.getLogger(Run.class);
 
 	public static void main(String[] args) throws IOException {
 
 		Window window = new Window();
+		LOGGER.info("new window created");
 		ListWindow listWindow = new ListWindow();
+		LOGGER.info("new listWindow created");
 		GasWindow gasWindow = new GasWindow();
+		LOGGER.info("new GasWindow created");
 		CarWindow carWindow = new CarWindow();
 		MyCar myCar = new MyCar();
 
@@ -42,6 +45,11 @@ public class Run {
 		SaveCarController saveCarController = new SaveCarController();
 		SaveController saveController = new SaveController();
 		ReadController readController = new ReadController();
+		ReadCarController readCarController = new ReadCarController();
+		InfoPanelController infoPanelController = new InfoPanelController();
+		
+		MyExpenseListSelectionListener myExpenseListSelectionListener = new MyExpenseListSelectionListener();
+		MyGasExpenseListSelectionListener myGasExpenseListSelectionListener = new MyGasExpenseListSelectionListener();
 
 		AddExpenseController addExpense = new AddExpenseController();
 		AddGasExpenseController addGasExpense = new AddGasExpenseController();
@@ -52,25 +60,9 @@ public class Run {
 
 		window.setOpenController(openController);
 		window.setReadController(readController);
+		window.setInfoPanelController(infoPanelController);
 
-		Expense expense1 = new GasExpense("Заправка", 198200, "2022-8-11", 50, "Заправка", 25);
-		Expense expense2 = new Expense("Автомойка", 198315, "2022-8-18", 10, "Автомойка");
-		Expense expense3 = new Expense("Замена масла", 198400, "2022-8-22", 100, "Замена масла");
-		Expense expense4 = new Expense("Замена шаровой", 198315, "2022-8-18", 60, "Расход");
-		Expense expense5 = new GasExpense("Заправка", 198450, "2022-8-21", 40, "Заправка", 15);
-		Expense expense6 = new GasExpense("Заправка", 198540, "2022-8-28", 70, "Заправка", 30);
-		Expense expense7 = new Expense("Автомойка", 198680, "2022-8-31", 10, "Автомойка");
-		Expense expense8 = new Expense("Регулировка фар", 199124, "2022-9-10", 10, "Задача");
-		Expense expense9 = new GasExpense("Заправка", 199600, "2022-9-15", 50, "Заправка", 25);
-
-		ArrayList<Expense> expenses = new ArrayList<Expense>();
-
-		List expenseList = Arrays.asList(expense1, expense2, expense3, expense4, expense5, expense6, expense7, expense8,
-				expense9);
-
-		expenses.addAll(expenseList);
-
-		Database generalDB = new Database(expenses);
+		Database generalDB = new Database();
 
 		listWindow.setDatabase(generalDB);
 		listWindow.setBackWindowController(backController);
@@ -79,6 +71,7 @@ public class Run {
 		listWindow.setDeleteExpense(deleteExpense);
 		listWindow.setEditExpenseController(editExpense);
 		listWindow.setSaveController(saveController);
+		listWindow.setMyExpenseListSelectionListener(myExpenseListSelectionListener);
 
 		gasWindow.setDatabase(generalDB);
 		gasWindow.setBackWindowController(backController);
@@ -87,15 +80,22 @@ public class Run {
 		gasWindow.setDeleteGasExpense(deleteGasExpense);
 		gasWindow.setEditGasExpense(editGasExpense);
 		gasWindow.setSaveController(saveController);
+		gasWindow.setMyGasExpenseListSelectionListener(myGasExpenseListSelectionListener);
 
 		carWindow.setBackWindowController(backController);
 		carWindow.setCloseWindowController(closeController);
 		carWindow.setSaveCarController(saveCarController);
 		carWindow.setMyCar(myCar);
+		carWindow.setReadCarController(readCarController);
+		carWindow.setInfoPanelController(infoPanelController);
+		
+		readCarController.setMyCar(myCar);
+		readCarController.setCarWindow(carWindow);
 
 		saveCarController.setCarWindow(carWindow);
 		saveCarController.setMyCar(myCar);
-
+		saveCarController.setWindow(window);
+		
 		readController.setDatabase(generalDB);
 		readController.setWindow(window);
 
@@ -135,6 +135,16 @@ public class Run {
 		closeController.setCarWindow(carWindow);
 		closeController.setListWindow(listWindow);
 		closeController.setGasWindow(gasWindow);
+		
+		myExpenseListSelectionListener.setListWindow(listWindow);
+		myExpenseListSelectionListener.setDatabase(generalDB);
+		
+		myGasExpenseListSelectionListener.setGasWindow(gasWindow);
+		myGasExpenseListSelectionListener.setDatabase(generalDB);
+		
+		infoPanelController.setDatabase(generalDB);
+		infoPanelController.setWindow(window);
+		infoPanelController.setCarWindow(carWindow);
 
 	}
 

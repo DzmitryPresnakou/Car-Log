@@ -6,10 +6,15 @@ import java.awt.event.WindowListener;
 
 import javax.swing.JOptionPane;
 
+import org.apache.log4j.Logger;
+
 public class CloseWindowController extends BaseController implements WindowListener {
+
+	private final static Logger LOGGER = Logger.getLogger(CloseWindowController.class);
 
 	@Override
 	public void windowClosing(WindowEvent e) {
+		LOGGER.info("window closing");
 		Object[] options = { "Да", "Нет!" };
 		int n = JOptionPane.showOptionDialog(e.getWindow(), "Закрыть окно?", "Подтверждение", JOptionPane.YES_NO_OPTION,
 				JOptionPane.QUESTION_MESSAGE, null, options, options[0]);

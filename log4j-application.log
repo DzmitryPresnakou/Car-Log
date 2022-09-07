@@ -1,0 +1,1073 @@
+2022-09-07 10:25:51 INFO  Run:34 - new window created
+2022-09-07 10:25:51 INFO  Run:36 - new listWindow created
+2022-09-07 10:25:51 INFO  Run:38 - new GasWindow created
+2022-09-07 10:25:53 INFO  ReadController:37 - the file database.txt has been read
+2022-09-07 10:25:53 INFO  OpenNewWindowController:22 - window "Машина" open
+2022-09-07 10:25:53 INFO  ReadCarController:38 - the file car.txt has been read
+2022-09-07 10:25:53 INFO  InfoPanelController:17 - main window activated
+2022-09-07 10:25:53 DEBUG Database:96 - method "showTheGreatestValueOfRun" called
+2022-09-07 10:25:53 DEBUG Database:85 - method "showExpenseByRun" called
+2022-09-07 10:25:53 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:25:53 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:25:53 DEBUG Database:244 - method "sumAllExpensesPerMonth" called
+2022-09-07 10:25:53 DEBUG Database:109 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 10:25:53 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 10:25:57 INFO  BackWindowController:13 - pressed "return"
+2022-09-07 10:25:57 INFO  InfoPanelController:17 - main window activated
+2022-09-07 10:25:57 DEBUG Database:96 - method "showTheGreatestValueOfRun" called
+2022-09-07 10:25:57 DEBUG Database:85 - method "showExpenseByRun" called
+2022-09-07 10:25:57 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:25:57 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:25:57 DEBUG Database:244 - method "sumAllExpensesPerMonth" called
+2022-09-07 10:25:57 DEBUG Database:109 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 10:25:57 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 10:25:58 INFO  ReadController:37 - the file database.txt has been read
+2022-09-07 10:25:58 INFO  OpenNewWindowController:22 - window "Машина" open
+2022-09-07 10:25:58 INFO  ReadCarController:38 - the file car.txt has been read
+2022-09-07 10:25:58 INFO  InfoPanelController:17 - main window activated
+2022-09-07 10:25:58 DEBUG Database:96 - method "showTheGreatestValueOfRun" called
+2022-09-07 10:25:58 DEBUG Database:85 - method "showExpenseByRun" called
+2022-09-07 10:25:58 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:25:58 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:25:58 DEBUG Database:244 - method "sumAllExpensesPerMonth" called
+2022-09-07 10:25:58 DEBUG Database:109 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 10:25:58 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 10:25:59 INFO  CloseWindowController:17 - window closing
+2022-09-07 10:26:02 INFO  Run:34 - new window created
+2022-09-07 10:26:02 INFO  Run:36 - new listWindow created
+2022-09-07 10:26:02 INFO  Run:38 - new GasWindow created
+2022-09-07 10:26:03 INFO  ReadController:37 - the file database.txt has been read
+2022-09-07 10:26:03 INFO  OpenNewWindowController:22 - window "Машина" open
+2022-09-07 10:26:03 INFO  ReadCarController:38 - the file car.txt has been read
+2022-09-07 10:26:03 INFO  InfoPanelController:17 - main window activated
+2022-09-07 10:26:03 DEBUG Database:96 - method "showTheGreatestValueOfRun" called
+2022-09-07 10:26:03 DEBUG Database:85 - method "showExpenseByRun" called
+2022-09-07 10:26:03 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:26:03 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:26:03 DEBUG Database:244 - method "sumAllExpensesPerMonth" called
+2022-09-07 10:26:03 DEBUG Database:109 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 10:26:03 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 10:26:26 INFO  SaveCarController:20 - the file car.txt has been saved
+2022-09-07 10:26:27 INFO  SaveCarController:56 - the file car.txt has been saved
+2022-09-07 10:26:27 INFO  InfoPanelController:17 - main window activated
+2022-09-07 10:26:27 DEBUG Database:96 - method "showTheGreatestValueOfRun" called
+2022-09-07 10:26:27 DEBUG Database:85 - method "showExpenseByRun" called
+2022-09-07 10:26:27 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:26:27 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:26:27 DEBUG Database:244 - method "sumAllExpensesPerMonth" called
+2022-09-07 10:26:27 DEBUG Database:109 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 10:26:27 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 10:26:28 INFO  ReadController:37 - the file database.txt has been read
+2022-09-07 10:26:28 INFO  OpenNewWindowController:22 - window "Машина" open
+2022-09-07 10:26:28 INFO  ReadCarController:38 - the file car.txt has been read
+2022-09-07 10:26:28 INFO  InfoPanelController:17 - main window activated
+2022-09-07 10:26:28 DEBUG Database:96 - method "showTheGreatestValueOfRun" called
+2022-09-07 10:26:28 DEBUG Database:85 - method "showExpenseByRun" called
+2022-09-07 10:26:28 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:26:28 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:26:28 DEBUG Database:244 - method "sumAllExpensesPerMonth" called
+2022-09-07 10:26:28 DEBUG Database:109 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 10:26:28 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 10:26:29 INFO  BackWindowController:13 - pressed "return"
+2022-09-07 10:26:29 INFO  InfoPanelController:17 - main window activated
+2022-09-07 10:26:29 DEBUG Database:96 - method "showTheGreatestValueOfRun" called
+2022-09-07 10:26:29 DEBUG Database:85 - method "showExpenseByRun" called
+2022-09-07 10:26:29 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:26:29 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:26:29 DEBUG Database:244 - method "sumAllExpensesPerMonth" called
+2022-09-07 10:26:29 DEBUG Database:109 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 10:26:29 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 10:26:29 INFO  ReadController:37 - the file database.txt has been read
+2022-09-07 10:26:29 INFO  OpenNewWindowController:47 - window "Автомойка" open
+2022-09-07 10:26:29 DEBUG Database:137 - method "searchExpenseByType" called
+2022-09-07 10:26:30 INFO  SaveController:40 - the file database.txt has been saved
+2022-09-07 10:26:30 INFO  BackWindowController:13 - pressed "return"
+2022-09-07 10:26:30 INFO  InfoPanelController:17 - main window activated
+2022-09-07 10:26:30 DEBUG Database:96 - method "showTheGreatestValueOfRun" called
+2022-09-07 10:26:30 DEBUG Database:85 - method "showExpenseByRun" called
+2022-09-07 10:26:30 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:26:30 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:26:30 DEBUG Database:244 - method "sumAllExpensesPerMonth" called
+2022-09-07 10:26:30 DEBUG Database:109 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 10:26:30 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 10:26:31 INFO  ReadController:37 - the file database.txt has been read
+2022-09-07 10:26:31 INFO  OpenNewWindowController:47 - window "Замена масла" open
+2022-09-07 10:26:31 DEBUG Database:137 - method "searchExpenseByType" called
+2022-09-07 10:26:32 INFO  SaveController:40 - the file database.txt has been saved
+2022-09-07 10:26:32 INFO  BackWindowController:13 - pressed "return"
+2022-09-07 10:26:32 INFO  InfoPanelController:17 - main window activated
+2022-09-07 10:26:32 DEBUG Database:96 - method "showTheGreatestValueOfRun" called
+2022-09-07 10:26:32 DEBUG Database:85 - method "showExpenseByRun" called
+2022-09-07 10:26:32 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:26:32 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:26:32 DEBUG Database:244 - method "sumAllExpensesPerMonth" called
+2022-09-07 10:26:32 DEBUG Database:109 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 10:26:32 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 10:26:33 INFO  ReadController:37 - the file database.txt has been read
+2022-09-07 10:26:33 INFO  OpenNewWindowController:47 - window "Расход" open
+2022-09-07 10:26:33 DEBUG Database:137 - method "searchExpenseByType" called
+2022-09-07 10:26:34 INFO  SaveController:40 - the file database.txt has been saved
+2022-09-07 10:26:34 INFO  BackWindowController:13 - pressed "return"
+2022-09-07 10:26:34 INFO  InfoPanelController:17 - main window activated
+2022-09-07 10:26:34 DEBUG Database:96 - method "showTheGreatestValueOfRun" called
+2022-09-07 10:26:34 DEBUG Database:85 - method "showExpenseByRun" called
+2022-09-07 10:26:34 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:26:34 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:26:34 DEBUG Database:244 - method "sumAllExpensesPerMonth" called
+2022-09-07 10:26:34 DEBUG Database:109 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 10:26:34 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 10:26:35 INFO  ReadController:37 - the file database.txt has been read
+2022-09-07 10:26:35 INFO  OpenNewWindowController:47 - window "Задача" open
+2022-09-07 10:26:35 DEBUG Database:137 - method "searchExpenseByType" called
+2022-09-07 10:26:36 INFO  SaveController:40 - the file database.txt has been saved
+2022-09-07 10:26:36 INFO  BackWindowController:13 - pressed "return"
+2022-09-07 10:26:36 INFO  InfoPanelController:17 - main window activated
+2022-09-07 10:26:36 DEBUG Database:96 - method "showTheGreatestValueOfRun" called
+2022-09-07 10:26:36 DEBUG Database:85 - method "showExpenseByRun" called
+2022-09-07 10:26:36 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:26:36 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:26:36 DEBUG Database:244 - method "sumAllExpensesPerMonth" called
+2022-09-07 10:26:36 DEBUG Database:109 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 10:26:36 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 10:26:36 INFO  ReadController:37 - the file database.txt has been read
+2022-09-07 10:26:36 INFO  OpenNewWindowController:33 - window "Заправка" open
+2022-09-07 10:26:36 DEBUG Database:137 - method "searchExpenseByType" called
+2022-09-07 10:26:37 INFO  SaveController:40 - the file database.txt has been saved
+2022-09-07 10:26:37 INFO  BackWindowController:13 - pressed "return"
+2022-09-07 10:26:37 INFO  InfoPanelController:17 - main window activated
+2022-09-07 10:26:37 DEBUG Database:96 - method "showTheGreatestValueOfRun" called
+2022-09-07 10:26:37 DEBUG Database:85 - method "showExpenseByRun" called
+2022-09-07 10:26:37 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:26:37 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:26:37 DEBUG Database:244 - method "sumAllExpensesPerMonth" called
+2022-09-07 10:26:37 DEBUG Database:109 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 10:26:37 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 10:26:38 INFO  ReadController:37 - the file database.txt has been read
+2022-09-07 10:26:38 INFO  OpenNewWindowController:22 - window "Машина" open
+2022-09-07 10:26:38 INFO  ReadCarController:38 - the file car.txt has been read
+2022-09-07 10:26:38 INFO  InfoPanelController:17 - main window activated
+2022-09-07 10:26:38 DEBUG Database:96 - method "showTheGreatestValueOfRun" called
+2022-09-07 10:26:38 DEBUG Database:85 - method "showExpenseByRun" called
+2022-09-07 10:26:38 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:26:38 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:26:38 DEBUG Database:244 - method "sumAllExpensesPerMonth" called
+2022-09-07 10:26:38 DEBUG Database:109 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 10:26:38 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 10:26:39 INFO  BackWindowController:13 - pressed "return"
+2022-09-07 10:26:39 INFO  InfoPanelController:17 - main window activated
+2022-09-07 10:26:39 DEBUG Database:96 - method "showTheGreatestValueOfRun" called
+2022-09-07 10:26:39 DEBUG Database:85 - method "showExpenseByRun" called
+2022-09-07 10:26:39 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:26:39 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:26:39 DEBUG Database:244 - method "sumAllExpensesPerMonth" called
+2022-09-07 10:26:39 DEBUG Database:109 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 10:26:39 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 10:26:44 INFO  Run:34 - new window created
+2022-09-07 10:26:44 INFO  Run:36 - new listWindow created
+2022-09-07 10:26:44 INFO  Run:38 - new GasWindow created
+2022-09-07 10:26:45 INFO  ReadController:37 - the file database.txt has been read
+2022-09-07 10:26:45 INFO  OpenNewWindowController:22 - window "Машина" open
+2022-09-07 10:26:45 INFO  ReadCarController:38 - the file car.txt has been read
+2022-09-07 10:26:45 INFO  InfoPanelController:17 - main window activated
+2022-09-07 10:26:45 DEBUG Database:96 - method "showTheGreatestValueOfRun" called
+2022-09-07 10:26:45 DEBUG Database:85 - method "showExpenseByRun" called
+2022-09-07 10:26:45 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:26:45 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:26:45 DEBUG Database:244 - method "sumAllExpensesPerMonth" called
+2022-09-07 10:26:45 DEBUG Database:109 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 10:26:45 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 10:26:49 INFO  BackWindowController:13 - pressed "return"
+2022-09-07 10:26:49 INFO  InfoPanelController:17 - main window activated
+2022-09-07 10:26:49 DEBUG Database:96 - method "showTheGreatestValueOfRun" called
+2022-09-07 10:26:49 DEBUG Database:85 - method "showExpenseByRun" called
+2022-09-07 10:26:49 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:26:49 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:26:49 DEBUG Database:244 - method "sumAllExpensesPerMonth" called
+2022-09-07 10:26:49 DEBUG Database:109 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 10:26:49 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 10:26:49 INFO  ReadController:37 - the file database.txt has been read
+2022-09-07 10:26:49 INFO  OpenNewWindowController:47 - window "Замена масла" open
+2022-09-07 10:26:49 DEBUG Database:137 - method "searchExpenseByType" called
+2022-09-07 10:26:51 INFO  SaveController:40 - the file database.txt has been saved
+2022-09-07 10:26:51 INFO  BackWindowController:13 - pressed "return"
+2022-09-07 10:26:51 INFO  InfoPanelController:17 - main window activated
+2022-09-07 10:26:51 DEBUG Database:96 - method "showTheGreatestValueOfRun" called
+2022-09-07 10:26:51 DEBUG Database:85 - method "showExpenseByRun" called
+2022-09-07 10:26:51 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:26:51 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:26:51 DEBUG Database:244 - method "sumAllExpensesPerMonth" called
+2022-09-07 10:26:51 DEBUG Database:109 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 10:26:51 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 10:26:53 INFO  ReadController:37 - the file database.txt has been read
+2022-09-07 10:26:53 INFO  OpenNewWindowController:33 - window "Заправка" open
+2022-09-07 10:26:53 DEBUG Database:137 - method "searchExpenseByType" called
+2022-09-07 10:26:55 INFO  SaveController:40 - the file database.txt has been saved
+2022-09-07 10:26:55 INFO  BackWindowController:13 - pressed "return"
+2022-09-07 10:26:55 INFO  InfoPanelController:17 - main window activated
+2022-09-07 10:26:55 DEBUG Database:96 - method "showTheGreatestValueOfRun" called
+2022-09-07 10:26:55 DEBUG Database:85 - method "showExpenseByRun" called
+2022-09-07 10:26:55 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:26:55 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:26:55 DEBUG Database:244 - method "sumAllExpensesPerMonth" called
+2022-09-07 10:26:55 DEBUG Database:109 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 10:26:55 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 10:27:34 INFO  Run:34 - new window created
+2022-09-07 10:27:34 INFO  Run:36 - new listWindow created
+2022-09-07 10:27:34 INFO  Run:38 - new GasWindow created
+2022-09-07 10:27:35 INFO  ReadController:37 - the file database.txt has been read
+2022-09-07 10:27:35 INFO  OpenNewWindowController:47 - window "Замена масла" open
+2022-09-07 10:27:35 DEBUG Database:137 - method "searchExpenseByType" called
+2022-09-07 10:27:39 INFO  SaveController:40 - the file database.txt has been saved
+2022-09-07 10:27:39 INFO  BackWindowController:13 - pressed "return"
+2022-09-07 10:27:39 INFO  InfoPanelController:17 - main window activated
+2022-09-07 10:27:39 DEBUG Database:96 - method "showTheGreatestValueOfRun" called
+2022-09-07 10:27:39 DEBUG Database:85 - method "showExpenseByRun" called
+2022-09-07 10:27:39 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:27:39 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:27:39 DEBUG Database:244 - method "sumAllExpensesPerMonth" called
+2022-09-07 10:27:39 DEBUG Database:109 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 10:27:39 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 10:27:41 INFO  ReadController:37 - the file database.txt has been read
+2022-09-07 10:27:41 INFO  OpenNewWindowController:22 - window "Машина" open
+2022-09-07 10:27:41 INFO  ReadCarController:38 - the file car.txt has been read
+2022-09-07 10:27:41 INFO  InfoPanelController:17 - main window activated
+2022-09-07 10:27:41 DEBUG Database:96 - method "showTheGreatestValueOfRun" called
+2022-09-07 10:27:41 DEBUG Database:85 - method "showExpenseByRun" called
+2022-09-07 10:27:41 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:27:41 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:27:41 DEBUG Database:244 - method "sumAllExpensesPerMonth" called
+2022-09-07 10:27:41 DEBUG Database:109 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 10:27:41 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 10:27:43 INFO  BackWindowController:13 - pressed "return"
+2022-09-07 10:27:43 INFO  InfoPanelController:17 - main window activated
+2022-09-07 10:27:43 DEBUG Database:96 - method "showTheGreatestValueOfRun" called
+2022-09-07 10:27:43 DEBUG Database:85 - method "showExpenseByRun" called
+2022-09-07 10:27:43 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:27:43 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:27:43 DEBUG Database:244 - method "sumAllExpensesPerMonth" called
+2022-09-07 10:27:43 DEBUG Database:109 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 10:27:43 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 10:27:45 INFO  ReadController:37 - the file database.txt has been read
+2022-09-07 10:27:45 INFO  OpenNewWindowController:33 - window "Заправка" open
+2022-09-07 10:27:45 DEBUG Database:137 - method "searchExpenseByType" called
+2022-09-07 10:27:46 INFO  SaveController:40 - the file database.txt has been saved
+2022-09-07 10:27:46 INFO  BackWindowController:13 - pressed "return"
+2022-09-07 10:27:46 INFO  InfoPanelController:17 - main window activated
+2022-09-07 10:27:46 DEBUG Database:96 - method "showTheGreatestValueOfRun" called
+2022-09-07 10:27:46 DEBUG Database:85 - method "showExpenseByRun" called
+2022-09-07 10:27:46 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:27:46 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:27:46 DEBUG Database:244 - method "sumAllExpensesPerMonth" called
+2022-09-07 10:27:46 DEBUG Database:109 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 10:27:46 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 10:27:46 INFO  ReadController:37 - the file database.txt has been read
+2022-09-07 10:27:46 INFO  OpenNewWindowController:47 - window "Расход" open
+2022-09-07 10:27:46 DEBUG Database:137 - method "searchExpenseByType" called
+2022-09-07 10:27:47 INFO  SaveController:40 - the file database.txt has been saved
+2022-09-07 10:27:47 INFO  BackWindowController:13 - pressed "return"
+2022-09-07 10:27:47 INFO  InfoPanelController:17 - main window activated
+2022-09-07 10:27:47 DEBUG Database:96 - method "showTheGreatestValueOfRun" called
+2022-09-07 10:27:47 DEBUG Database:85 - method "showExpenseByRun" called
+2022-09-07 10:27:47 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:27:47 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:27:47 DEBUG Database:244 - method "sumAllExpensesPerMonth" called
+2022-09-07 10:27:47 DEBUG Database:109 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 10:27:47 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 10:27:47 INFO  ReadController:37 - the file database.txt has been read
+2022-09-07 10:27:47 INFO  OpenNewWindowController:47 - window "Задача" open
+2022-09-07 10:27:47 DEBUG Database:137 - method "searchExpenseByType" called
+2022-09-07 10:27:48 INFO  SaveController:40 - the file database.txt has been saved
+2022-09-07 10:27:48 INFO  BackWindowController:13 - pressed "return"
+2022-09-07 10:27:48 INFO  InfoPanelController:17 - main window activated
+2022-09-07 10:27:48 DEBUG Database:96 - method "showTheGreatestValueOfRun" called
+2022-09-07 10:27:48 DEBUG Database:85 - method "showExpenseByRun" called
+2022-09-07 10:27:48 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:27:48 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:27:48 DEBUG Database:244 - method "sumAllExpensesPerMonth" called
+2022-09-07 10:27:48 DEBUG Database:109 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 10:27:48 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 10:27:56 INFO  ReadController:37 - the file database.txt has been read
+2022-09-07 10:27:56 INFO  OpenNewWindowController:47 - window "Задача" open
+2022-09-07 10:27:56 DEBUG Database:137 - method "searchExpenseByType" called
+2022-09-07 10:28:04 INFO  SaveController:40 - the file database.txt has been saved
+2022-09-07 10:28:04 INFO  BackWindowController:13 - pressed "return"
+2022-09-07 10:28:04 INFO  InfoPanelController:17 - main window activated
+2022-09-07 10:28:04 DEBUG Database:96 - method "showTheGreatestValueOfRun" called
+2022-09-07 10:28:04 DEBUG Database:85 - method "showExpenseByRun" called
+2022-09-07 10:28:04 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:28:04 DEBUG Database:229 - method "sumExpensesPerMonthByType" called
+2022-09-07 10:28:04 DEBUG Database:244 - method "sumAllExpensesPerMonth" called
+2022-09-07 10:28:04 DEBUG Database:109 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 10:28:04 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 11:08:34 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:08:34 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:08:34 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:08:34 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:08:34 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:08:34 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:08:34 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:08:34 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:08:34 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:08:34 DEBUG Database:37 - method "deleteExpense by index" called
+2022-09-07 11:09:37 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:09:37 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:09:37 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:09:37 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:09:37 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:09:37 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:09:37 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:09:37 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:09:37 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:09:37 DEBUG Database:37 - method "deleteExpense by index" called
+2022-09-07 11:09:43 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:09:43 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:09:43 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:09:43 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:09:43 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:09:43 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:09:43 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:09:43 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:09:43 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:09:43 DEBUG Database:37 - method "deleteExpense by index" called
+2022-09-07 11:11:48 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:11:48 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:11:48 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:11:48 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:11:48 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:11:48 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:11:48 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:11:48 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:11:48 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:11:48 DEBUG Database:37 - method "deleteExpense by index" called
+2022-09-07 11:12:43 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:12:43 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:12:43 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:12:43 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:12:43 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:12:43 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:12:43 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:12:43 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:12:43 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:12:43 DEBUG Database:37 - method "deleteExpense by index" called
+2022-09-07 11:12:43 DEBUG Database:37 - method "deleteExpense by index" called
+2022-09-07 11:13:05 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:13:05 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:13:05 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:13:05 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:13:05 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:13:05 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:13:05 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:13:05 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:13:05 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:13:05 DEBUG Database:37 - method "deleteExpense by index" called
+2022-09-07 11:13:05 DEBUG Database:37 - method "deleteExpense by index" called
+2022-09-07 11:15:21 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:21 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:21 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:21 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:21 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:21 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:21 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:21 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:21 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:21 DEBUG Database:37 - method "deleteExpense by index" called
+2022-09-07 11:15:39 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:39 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:39 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:39 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:39 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:39 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:39 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:39 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:39 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:39 DEBUG Database:37 - method "deleteExpense by index" called
+2022-09-07 11:15:39 DEBUG Database:37 - method "deleteExpense by index" called
+2022-09-07 11:15:39 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:39 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:39 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:39 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:39 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:39 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:39 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:39 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:39 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:39 DEBUG Database:37 - method "deleteExpense by index" called
+2022-09-07 11:15:56 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:56 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:56 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:56 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:56 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:56 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:56 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:56 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:56 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:56 DEBUG Database:37 - method "deleteExpense by index" called
+2022-09-07 11:15:56 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:56 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:56 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:56 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:56 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:56 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:56 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:56 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:56 DEBUG Database:32 - method "addExpense" called
+2022-09-07 11:15:56 DEBUG Database:37 - method "deleteExpense by index" called
+2022-09-07 12:37:41 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:37:41 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:37:41 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:37:41 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:37:41 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:37:41 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:37:41 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:37:41 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:37:41 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:37:41 DEBUG Database:45 - method "deleteExpense by all fields" called
+2022-09-07 12:38:14 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:38:14 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:38:14 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:38:14 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:38:14 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:38:14 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:38:14 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:38:14 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:38:14 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:38:14 DEBUG Database:45 - method "deleteExpense by all fields" called
+2022-09-07 12:45:49 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:45:49 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:45:49 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:45:49 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:45:49 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:45:49 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:45:49 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:45:49 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:45:49 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:45:49 DEBUG Database:45 - method "deleteExpense by all fields" called
+2022-09-07 12:46:07 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:46:07 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:46:07 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:46:07 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:46:07 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:46:07 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:46:07 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:46:07 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:46:07 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:46:07 DEBUG Database:80 - method "showExpense" called
+2022-09-07 12:51:41 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:41 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:41 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:41 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:41 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:41 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:41 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:41 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:41 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:41 DEBUG Database:80 - method "showExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:80 - method "showExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:80 - method "showExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:45 - method "deleteExpense by all fields" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:37 - method "deleteExpense by index" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:51:45 DEBUG Database:37 - method "deleteExpense by index" called
+2022-09-07 12:54:07 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:54:07 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:54:07 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:54:07 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:54:07 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:54:07 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:54:07 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:54:07 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:54:07 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:54:07 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:54:07 DEBUG Database:80 - method "showExpense" called
+2022-09-07 12:55:37 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:55:37 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:55:37 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:55:37 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:55:37 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:55:37 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:55:37 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:55:37 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:55:37 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:55:37 DEBUG Database:32 - method "addExpense" called
+2022-09-07 12:55:37 DEBUG Database:80 - method "showExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:77 - method "showExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:77 - method "showExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:77 - method "showExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:44 - method "deleteExpense by all fields" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:36 - method "deleteExpense by index" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:00:00 DEBUG Database:36 - method "deleteExpense by index" called
+2022-09-07 13:02:13 INFO  Run:34 - new window created
+2022-09-07 13:02:13 INFO  Run:36 - new listWindow created
+2022-09-07 13:02:13 INFO  Run:38 - new GasWindow created
+2022-09-07 13:02:15 INFO  ReadController:37 - the file database.txt has been read
+2022-09-07 13:02:15 INFO  OpenNewWindowController:22 - window "Машина" open
+2022-09-07 13:02:15 INFO  ReadCarController:38 - the file car.txt has been read
+2022-09-07 13:02:15 INFO  InfoPanelController:17 - main window activated
+2022-09-07 13:02:15 DEBUG Database:93 - method "showTheGreatestValueOfRun" called
+2022-09-07 13:02:15 DEBUG Database:82 - method "showExpenseByRun" called
+2022-09-07 13:02:15 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:02:15 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:02:15 DEBUG Database:242 - method "sumAllExpensesPerMonth" called
+2022-09-07 13:02:15 DEBUG Database:106 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 13:02:15 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 13:02:40 INFO  SaveCarController:20 - the file car.txt has been saved
+2022-09-07 13:02:42 INFO  SaveCarController:56 - the file car.txt has been saved
+2022-09-07 13:02:42 INFO  InfoPanelController:17 - main window activated
+2022-09-07 13:02:42 DEBUG Database:93 - method "showTheGreatestValueOfRun" called
+2022-09-07 13:02:42 DEBUG Database:82 - method "showExpenseByRun" called
+2022-09-07 13:02:42 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:02:42 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:02:42 DEBUG Database:242 - method "sumAllExpensesPerMonth" called
+2022-09-07 13:02:42 DEBUG Database:106 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 13:02:42 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 13:02:42 INFO  ReadController:37 - the file database.txt has been read
+2022-09-07 13:02:42 INFO  OpenNewWindowController:22 - window "Машина" open
+2022-09-07 13:02:42 INFO  ReadCarController:38 - the file car.txt has been read
+2022-09-07 13:02:42 INFO  InfoPanelController:17 - main window activated
+2022-09-07 13:02:42 DEBUG Database:93 - method "showTheGreatestValueOfRun" called
+2022-09-07 13:02:42 DEBUG Database:82 - method "showExpenseByRun" called
+2022-09-07 13:02:42 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:02:42 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:02:42 DEBUG Database:242 - method "sumAllExpensesPerMonth" called
+2022-09-07 13:02:42 DEBUG Database:106 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 13:02:42 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 13:02:43 INFO  BackWindowController:13 - pressed "return"
+2022-09-07 13:02:43 INFO  InfoPanelController:17 - main window activated
+2022-09-07 13:02:43 DEBUG Database:93 - method "showTheGreatestValueOfRun" called
+2022-09-07 13:02:43 DEBUG Database:82 - method "showExpenseByRun" called
+2022-09-07 13:02:43 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:02:43 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:02:43 DEBUG Database:242 - method "sumAllExpensesPerMonth" called
+2022-09-07 13:02:43 DEBUG Database:106 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 13:02:43 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 13:02:44 INFO  ReadController:37 - the file database.txt has been read
+2022-09-07 13:02:44 INFO  OpenNewWindowController:47 - window "Автомойка" open
+2022-09-07 13:02:44 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:02:45 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:02:45 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:02:45 DEBUG MyExpenseListSelectionListener:33 - expense - name Автомойка+7, date: 2022-08-03, price = 15, run = 198900 selected
+2022-09-07 13:02:45 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:02:45 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:02:45 DEBUG MyExpenseListSelectionListener:33 - expense - name Автомойка+7, date: 2022-08-03, price = 15, run = 198900 selected
+2022-09-07 13:03:00 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:03:00 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:00 DEBUG MyExpenseListSelectionListener:33 - expense - name Автомойка+7, date: 2022-09-07, price = 16, run = 199900 selected
+2022-09-07 13:03:00 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:03:00 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:00 DEBUG MyExpenseListSelectionListener:33 - expense - name Автомойка+7, date: 2022-09-07, price = 16, run = 199900 selected
+2022-09-07 13:03:15 INFO  SaveController:40 - the file database.txt has been saved
+2022-09-07 13:03:15 INFO  EditExpenseController:18 - pressed "edit"
+2022-09-07 13:03:15 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:15 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:15 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:15 DEBUG Database:145 - method "searchExpenseByNameRunDatePriceType" called
+2022-09-07 13:03:15 DEBUG Database:203 - method "findExpenseByNameAndRunAndPrice" called
+2022-09-07 13:03:15 DEBUG Database:119 - method "editExpense" called
+2022-09-07 13:03:15 INFO  EditExpenseController:52 - expense edited
+2022-09-07 13:03:15 DEBUG EditExpenseController:53 - edited expense name = Ручная мойка , run = 199900Date: 2022-09-07, price = 16, type = Автомойка
+2022-09-07 13:03:15 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:15 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:03:15 DEBUG MyExpenseListSelectionListener:41 - nothing selected
+2022-09-07 13:03:16 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:03:16 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:16 DEBUG MyExpenseListSelectionListener:33 - expense - name Автомойка+7, date: 2022-08-03, price = 15, run = 198900 selected
+2022-09-07 13:03:17 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:03:17 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:17 DEBUG MyExpenseListSelectionListener:33 - expense - name Автомойка+7, date: 2022-08-03, price = 15, run = 198900 selected
+2022-09-07 13:03:24 INFO  SaveController:40 - the file database.txt has been saved
+2022-09-07 13:03:24 INFO  EditExpenseController:18 - pressed "edit"
+2022-09-07 13:03:24 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:24 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:24 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:24 DEBUG Database:145 - method "searchExpenseByNameRunDatePriceType" called
+2022-09-07 13:03:24 DEBUG Database:203 - method "findExpenseByNameAndRunAndPrice" called
+2022-09-07 13:03:24 DEBUG Database:119 - method "editExpense" called
+2022-09-07 13:03:24 INFO  EditExpenseController:52 - expense edited
+2022-09-07 13:03:24 DEBUG EditExpenseController:53 - edited expense name = Автомойка, run = 198900Date: 2022-08-03, price = 15, type = Автомойка
+2022-09-07 13:03:24 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:24 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:03:24 DEBUG MyExpenseListSelectionListener:41 - nothing selected
+2022-09-07 13:03:25 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:03:25 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:25 DEBUG MyExpenseListSelectionListener:33 - expense - name Автомойка, date: 2022-08-03, price = 15, run = 198900 selected
+2022-09-07 13:03:25 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:03:25 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:25 DEBUG MyExpenseListSelectionListener:33 - expense - name Автомойка, date: 2022-08-03, price = 15, run = 198900 selected
+2022-09-07 13:03:30 INFO  SaveController:40 - the file database.txt has been saved
+2022-09-07 13:03:30 INFO  BackWindowController:13 - pressed "return"
+2022-09-07 13:03:30 INFO  InfoPanelController:17 - main window activated
+2022-09-07 13:03:30 DEBUG Database:93 - method "showTheGreatestValueOfRun" called
+2022-09-07 13:03:30 DEBUG Database:82 - method "showExpenseByRun" called
+2022-09-07 13:03:30 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:03:30 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:03:30 DEBUG Database:242 - method "sumAllExpensesPerMonth" called
+2022-09-07 13:03:30 DEBUG Database:106 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 13:03:30 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 13:03:34 INFO  ReadController:37 - the file database.txt has been read
+2022-09-07 13:03:34 INFO  OpenNewWindowController:47 - window "Замена масла" open
+2022-09-07 13:03:34 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:34 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:03:34 DEBUG MyExpenseListSelectionListener:41 - nothing selected
+2022-09-07 13:03:35 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:03:35 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:35 DEBUG MyExpenseListSelectionListener:33 - expense - name Замена масла++, date: 2022-04-04, price = 200, run = 189600 selected
+2022-09-07 13:03:35 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:03:35 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:35 DEBUG MyExpenseListSelectionListener:33 - expense - name Замена масла++, date: 2022-04-04, price = 200, run = 189600 selected
+2022-09-07 13:03:39 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:03:39 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:39 DEBUG MyExpenseListSelectionListener:33 - expense - name масло и фильтр, date: 2022-09-04, price = 110, run = 198600 selected
+2022-09-07 13:03:39 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:03:39 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:39 DEBUG MyExpenseListSelectionListener:33 - expense - name масло и фильтр, date: 2022-09-04, price = 110, run = 198600 selected
+2022-09-07 13:03:40 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:03:40 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:40 DEBUG MyExpenseListSelectionListener:33 - expense - name Замена масла++, date: 2022-04-04, price = 200, run = 189600 selected
+2022-09-07 13:03:40 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:03:40 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:40 DEBUG MyExpenseListSelectionListener:33 - expense - name Замена масла++, date: 2022-04-04, price = 200, run = 189600 selected
+2022-09-07 13:03:41 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:03:41 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:41 DEBUG MyExpenseListSelectionListener:33 - expense - name масло и фильтр, date: 2022-09-04, price = 110, run = 198600 selected
+2022-09-07 13:03:41 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:03:41 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:41 DEBUG MyExpenseListSelectionListener:33 - expense - name масло и фильтр, date: 2022-09-04, price = 110, run = 198600 selected
+2022-09-07 13:03:43 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:03:43 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:43 DEBUG MyExpenseListSelectionListener:33 - expense - name Замена масла++, date: 2022-04-04, price = 200, run = 189600 selected
+2022-09-07 13:03:43 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:03:43 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:43 DEBUG MyExpenseListSelectionListener:33 - expense - name Замена масла++, date: 2022-04-04, price = 200, run = 189600 selected
+2022-09-07 13:03:50 INFO  SaveController:40 - the file database.txt has been saved
+2022-09-07 13:03:50 INFO  EditExpenseController:18 - pressed "edit"
+2022-09-07 13:03:50 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:50 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:50 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:50 DEBUG Database:145 - method "searchExpenseByNameRunDatePriceType" called
+2022-09-07 13:03:50 DEBUG Database:203 - method "findExpenseByNameAndRunAndPrice" called
+2022-09-07 13:03:50 DEBUG Database:119 - method "editExpense" called
+2022-09-07 13:03:50 INFO  EditExpenseController:52 - expense edited
+2022-09-07 13:03:50 DEBUG EditExpenseController:53 - edited expense name = Замена масла, run = 189600Date: 2022-04-04, price = 200, type = Замена масла
+2022-09-07 13:03:50 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:50 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:03:50 DEBUG MyExpenseListSelectionListener:41 - nothing selected
+2022-09-07 13:03:50 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:03:50 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:50 DEBUG MyExpenseListSelectionListener:33 - expense - name масло и фильтр, date: 2022-09-04, price = 110, run = 198600 selected
+2022-09-07 13:03:50 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:03:50 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:50 DEBUG MyExpenseListSelectionListener:33 - expense - name масло и фильтр, date: 2022-09-04, price = 110, run = 198600 selected
+2022-09-07 13:03:52 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:03:52 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:52 DEBUG MyExpenseListSelectionListener:33 - expense - name Замена масла, date: 2022-04-04, price = 200, run = 189600 selected
+2022-09-07 13:03:52 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:03:52 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:03:52 DEBUG MyExpenseListSelectionListener:33 - expense - name Замена масла, date: 2022-04-04, price = 200, run = 189600 selected
+2022-09-07 13:04:02 INFO  SaveController:40 - the file database.txt has been saved
+2022-09-07 13:04:02 INFO  EditExpenseController:18 - pressed "edit"
+2022-09-07 13:04:02 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:02 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:02 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:02 DEBUG Database:145 - method "searchExpenseByNameRunDatePriceType" called
+2022-09-07 13:04:02 DEBUG Database:203 - method "findExpenseByNameAndRunAndPrice" called
+2022-09-07 13:04:02 DEBUG Database:119 - method "editExpense" called
+2022-09-07 13:04:02 INFO  EditExpenseController:52 - expense edited
+2022-09-07 13:04:02 DEBUG EditExpenseController:53 - edited expense name = Замена масла, run = 189600Date: 2022-04-04, price = 100, type = Замена масла
+2022-09-07 13:04:02 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:02 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:04:02 DEBUG MyExpenseListSelectionListener:41 - nothing selected
+2022-09-07 13:04:03 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:04:03 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:03 DEBUG MyExpenseListSelectionListener:33 - expense - name масло и фильтр, date: 2022-09-04, price = 110, run = 198600 selected
+2022-09-07 13:04:03 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:04:03 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:03 DEBUG MyExpenseListSelectionListener:33 - expense - name масло и фильтр, date: 2022-09-04, price = 110, run = 198600 selected
+2022-09-07 13:04:06 INFO  SaveController:40 - the file database.txt has been saved
+2022-09-07 13:04:06 INFO  BackWindowController:13 - pressed "return"
+2022-09-07 13:04:06 INFO  InfoPanelController:17 - main window activated
+2022-09-07 13:04:06 DEBUG Database:93 - method "showTheGreatestValueOfRun" called
+2022-09-07 13:04:06 DEBUG Database:82 - method "showExpenseByRun" called
+2022-09-07 13:04:06 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:04:06 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:04:06 DEBUG Database:242 - method "sumAllExpensesPerMonth" called
+2022-09-07 13:04:06 DEBUG Database:106 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 13:04:06 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 13:04:07 INFO  ReadController:37 - the file database.txt has been read
+2022-09-07 13:04:07 INFO  OpenNewWindowController:33 - window "Заправка" open
+2022-09-07 13:04:07 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:09 INFO  MyGasExpenseListSelectionListener:20 - MyGasExpenseListSelectionListener called
+2022-09-07 13:04:09 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:09 DEBUG MyGasExpenseListSelectionListener:39 - gasExpense - name Заправка, date: 2022-08-04, price = 50, run = 198200, gas = 25 selected
+2022-09-07 13:04:09 INFO  MyGasExpenseListSelectionListener:20 - MyGasExpenseListSelectionListener called
+2022-09-07 13:04:09 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:09 DEBUG MyGasExpenseListSelectionListener:39 - gasExpense - name Заправка, date: 2022-08-04, price = 50, run = 198200, gas = 25 selected
+2022-09-07 13:04:13 INFO  MyGasExpenseListSelectionListener:20 - MyGasExpenseListSelectionListener called
+2022-09-07 13:04:13 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:13 DEBUG MyGasExpenseListSelectionListener:39 - gasExpense - name Заправка, date: 2022-08-13, price = 40, run = 198550, gas = 15 selected
+2022-09-07 13:04:13 INFO  MyGasExpenseListSelectionListener:20 - MyGasExpenseListSelectionListener called
+2022-09-07 13:04:13 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:13 DEBUG MyGasExpenseListSelectionListener:39 - gasExpense - name Заправка, date: 2022-08-13, price = 40, run = 198550, gas = 15 selected
+2022-09-07 13:04:14 INFO  MyGasExpenseListSelectionListener:20 - MyGasExpenseListSelectionListener called
+2022-09-07 13:04:14 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:14 DEBUG MyGasExpenseListSelectionListener:39 - gasExpense - name Заправка, date: 2022-08-20, price = 50, run = 199000, gas = 20 selected
+2022-09-07 13:04:14 INFO  MyGasExpenseListSelectionListener:20 - MyGasExpenseListSelectionListener called
+2022-09-07 13:04:14 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:14 DEBUG MyGasExpenseListSelectionListener:39 - gasExpense - name Заправка, date: 2022-08-20, price = 50, run = 199000, gas = 20 selected
+2022-09-07 13:04:14 INFO  MyGasExpenseListSelectionListener:20 - MyGasExpenseListSelectionListener called
+2022-09-07 13:04:14 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:14 DEBUG MyGasExpenseListSelectionListener:39 - gasExpense - name Заправка++90, date: 2022-09-08, price = 50, run = 199800, gas = 20 selected
+2022-09-07 13:04:14 INFO  MyGasExpenseListSelectionListener:20 - MyGasExpenseListSelectionListener called
+2022-09-07 13:04:14 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:14 DEBUG MyGasExpenseListSelectionListener:39 - gasExpense - name Заправка++90, date: 2022-09-08, price = 50, run = 199800, gas = 20 selected
+2022-09-07 13:04:15 INFO  MyGasExpenseListSelectionListener:20 - MyGasExpenseListSelectionListener called
+2022-09-07 13:04:15 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:15 DEBUG MyGasExpenseListSelectionListener:39 - gasExpense - name Заправка, date: 2022-08-04, price = 50, run = 198200, gas = 25 selected
+2022-09-07 13:04:15 INFO  MyGasExpenseListSelectionListener:20 - MyGasExpenseListSelectionListener called
+2022-09-07 13:04:15 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:15 DEBUG MyGasExpenseListSelectionListener:39 - gasExpense - name Заправка, date: 2022-08-04, price = 50, run = 198200, gas = 25 selected
+2022-09-07 13:04:26 INFO  SaveController:40 - the file database.txt has been saved
+2022-09-07 13:04:26 INFO  EditGasExpenseController:17 - pressed "edit"
+2022-09-07 13:04:26 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:26 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:26 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:26 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:26 DEBUG Database:158 - method "searchExpenseByNameRunDatePriceGas" called
+2022-09-07 13:04:26 DEBUG Database:215 - method "findExpenseByNameAndRunAndPriceGas" called
+2022-09-07 13:04:26 DEBUG Database:127 - method "editGasExpense" called
+2022-09-07 13:04:26 INFO  EditGasExpenseController:55 - expense edited
+2022-09-07 13:04:26 INFO  EditGasExpenseController:56 - expense edited
+2022-09-07 13:04:26 DEBUG EditGasExpenseController:57 - edited expense name = Заправка 95, run = 198200Date: 2022-08-04, price = 50, type = Заправка, gas = 25
+2022-09-07 13:04:26 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:26 INFO  MyGasExpenseListSelectionListener:20 - MyGasExpenseListSelectionListener called
+2022-09-07 13:04:29 INFO  MyGasExpenseListSelectionListener:20 - MyGasExpenseListSelectionListener called
+2022-09-07 13:04:29 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:29 DEBUG MyGasExpenseListSelectionListener:39 - gasExpense - name Заправка, date: 2022-08-13, price = 40, run = 198550, gas = 15 selected
+2022-09-07 13:04:30 INFO  MyGasExpenseListSelectionListener:20 - MyGasExpenseListSelectionListener called
+2022-09-07 13:04:30 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:30 DEBUG MyGasExpenseListSelectionListener:39 - gasExpense - name Заправка, date: 2022-08-13, price = 40, run = 198550, gas = 15 selected
+2022-09-07 13:04:35 INFO  SaveController:40 - the file database.txt has been saved
+2022-09-07 13:04:35 INFO  EditGasExpenseController:17 - pressed "edit"
+2022-09-07 13:04:35 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:35 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:35 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:35 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:35 DEBUG Database:158 - method "searchExpenseByNameRunDatePriceGas" called
+2022-09-07 13:04:35 DEBUG Database:215 - method "findExpenseByNameAndRunAndPriceGas" called
+2022-09-07 13:04:35 DEBUG Database:127 - method "editGasExpense" called
+2022-09-07 13:04:35 INFO  EditGasExpenseController:55 - expense edited
+2022-09-07 13:04:35 INFO  EditGasExpenseController:56 - expense edited
+2022-09-07 13:04:35 DEBUG EditGasExpenseController:57 - edited expense name = Заправка 92, run = 198550Date: 2022-08-13, price = 40, type = Заправка, gas = 15
+2022-09-07 13:04:35 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:35 INFO  MyGasExpenseListSelectionListener:20 - MyGasExpenseListSelectionListener called
+2022-09-07 13:04:36 INFO  MyGasExpenseListSelectionListener:20 - MyGasExpenseListSelectionListener called
+2022-09-07 13:04:36 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:36 DEBUG MyGasExpenseListSelectionListener:39 - gasExpense - name Заправка, date: 2022-08-20, price = 50, run = 199000, gas = 20 selected
+2022-09-07 13:04:36 INFO  MyGasExpenseListSelectionListener:20 - MyGasExpenseListSelectionListener called
+2022-09-07 13:04:36 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:36 DEBUG MyGasExpenseListSelectionListener:39 - gasExpense - name Заправка, date: 2022-08-20, price = 50, run = 199000, gas = 20 selected
+2022-09-07 13:04:47 INFO  MyGasExpenseListSelectionListener:20 - MyGasExpenseListSelectionListener called
+2022-09-07 13:04:47 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:47 DEBUG MyGasExpenseListSelectionListener:39 - gasExpense - name Заправка++90, date: 2022-09-08, price = 50, run = 199800, gas = 20 selected
+2022-09-07 13:04:47 INFO  MyGasExpenseListSelectionListener:20 - MyGasExpenseListSelectionListener called
+2022-09-07 13:04:47 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:47 DEBUG MyGasExpenseListSelectionListener:39 - gasExpense - name Заправка++90, date: 2022-09-08, price = 50, run = 199800, gas = 20 selected
+2022-09-07 13:04:51 INFO  MyGasExpenseListSelectionListener:20 - MyGasExpenseListSelectionListener called
+2022-09-07 13:04:51 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:51 DEBUG MyGasExpenseListSelectionListener:39 - gasExpense - name Заправка, date: 2022-08-20, price = 50, run = 199000, gas = 20 selected
+2022-09-07 13:04:51 INFO  MyGasExpenseListSelectionListener:20 - MyGasExpenseListSelectionListener called
+2022-09-07 13:04:51 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:04:51 DEBUG MyGasExpenseListSelectionListener:39 - gasExpense - name Заправка, date: 2022-08-20, price = 50, run = 199000, gas = 20 selected
+2022-09-07 13:05:00 INFO  SaveController:40 - the file database.txt has been saved
+2022-09-07 13:05:00 INFO  EditGasExpenseController:17 - pressed "edit"
+2022-09-07 13:05:00 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:05:00 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:05:00 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:05:00 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:05:00 DEBUG Database:158 - method "searchExpenseByNameRunDatePriceGas" called
+2022-09-07 13:05:00 DEBUG Database:215 - method "findExpenseByNameAndRunAndPriceGas" called
+2022-09-07 13:05:00 DEBUG Database:127 - method "editGasExpense" called
+2022-09-07 13:05:00 INFO  EditGasExpenseController:55 - expense edited
+2022-09-07 13:05:00 INFO  EditGasExpenseController:56 - expense edited
+2022-09-07 13:05:00 DEBUG EditGasExpenseController:57 - edited expense name = Заправка 95, run = 199000Date: 2022-08-20, price = 50, type = Заправка, gas = 20
+2022-09-07 13:05:00 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:05:00 INFO  MyGasExpenseListSelectionListener:20 - MyGasExpenseListSelectionListener called
+2022-09-07 13:05:01 INFO  MyGasExpenseListSelectionListener:20 - MyGasExpenseListSelectionListener called
+2022-09-07 13:05:01 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:05:01 DEBUG MyGasExpenseListSelectionListener:39 - gasExpense - name Заправка++90, date: 2022-09-08, price = 50, run = 199800, gas = 20 selected
+2022-09-07 13:05:01 INFO  MyGasExpenseListSelectionListener:20 - MyGasExpenseListSelectionListener called
+2022-09-07 13:05:01 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:05:01 DEBUG MyGasExpenseListSelectionListener:39 - gasExpense - name Заправка++90, date: 2022-09-08, price = 50, run = 199800, gas = 20 selected
+2022-09-07 13:05:07 INFO  SaveController:40 - the file database.txt has been saved
+2022-09-07 13:05:07 INFO  EditGasExpenseController:17 - pressed "edit"
+2022-09-07 13:05:07 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:05:07 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:05:07 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:05:07 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:05:07 DEBUG Database:158 - method "searchExpenseByNameRunDatePriceGas" called
+2022-09-07 13:05:07 DEBUG Database:215 - method "findExpenseByNameAndRunAndPriceGas" called
+2022-09-07 13:05:07 DEBUG Database:127 - method "editGasExpense" called
+2022-09-07 13:05:07 INFO  EditGasExpenseController:55 - expense edited
+2022-09-07 13:05:07 INFO  EditGasExpenseController:56 - expense edited
+2022-09-07 13:05:07 DEBUG EditGasExpenseController:57 - edited expense name = Заправка 95, run = 199800Date: 2022-09-08, price = 50, type = Заправка, gas = 20
+2022-09-07 13:05:07 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:05:07 INFO  MyGasExpenseListSelectionListener:20 - MyGasExpenseListSelectionListener called
+2022-09-07 13:05:07 INFO  MyGasExpenseListSelectionListener:20 - MyGasExpenseListSelectionListener called
+2022-09-07 13:05:07 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:05:07 DEBUG MyGasExpenseListSelectionListener:39 - gasExpense - name Заправка 95, date: 2022-09-08, price = 50, run = 199800, gas = 20 selected
+2022-09-07 13:05:07 INFO  MyGasExpenseListSelectionListener:20 - MyGasExpenseListSelectionListener called
+2022-09-07 13:05:07 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:05:07 DEBUG MyGasExpenseListSelectionListener:39 - gasExpense - name Заправка 95, date: 2022-09-08, price = 50, run = 199800, gas = 20 selected
+2022-09-07 13:05:10 INFO  SaveController:40 - the file database.txt has been saved
+2022-09-07 13:05:10 INFO  BackWindowController:13 - pressed "return"
+2022-09-07 13:05:10 INFO  InfoPanelController:17 - main window activated
+2022-09-07 13:05:10 DEBUG Database:93 - method "showTheGreatestValueOfRun" called
+2022-09-07 13:05:10 DEBUG Database:82 - method "showExpenseByRun" called
+2022-09-07 13:05:10 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:05:10 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:05:10 DEBUG Database:242 - method "sumAllExpensesPerMonth" called
+2022-09-07 13:05:10 DEBUG Database:106 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 13:05:10 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 13:05:11 INFO  ReadController:37 - the file database.txt has been read
+2022-09-07 13:05:11 INFO  OpenNewWindowController:47 - window "Расход" open
+2022-09-07 13:05:11 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:05:11 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:05:11 DEBUG MyExpenseListSelectionListener:41 - nothing selected
+2022-09-07 13:05:12 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:05:12 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:05:12 DEBUG MyExpenseListSelectionListener:33 - expense - name Замена шаровой, date: 2022-08-12, price = 60, run = 198515 selected
+2022-09-07 13:05:12 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:05:12 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:05:12 DEBUG MyExpenseListSelectionListener:33 - expense - name Замена шаровой, date: 2022-08-12, price = 60, run = 198515 selected
+2022-09-07 13:06:15 INFO  SaveController:40 - the file database.txt has been saved
+2022-09-07 13:06:15 INFO  AddExpenseController:18 - pressed "add"
+2022-09-07 13:06:15 DEBUG Database:145 - method "searchExpenseByNameRunDatePriceType" called
+2022-09-07 13:06:15 DEBUG Database:31 - method "addExpense" called
+2022-09-07 13:06:15 INFO  AddExpenseController:39 - new expense added
+2022-09-07 13:06:15 DEBUG AddExpenseController:40 - name entered = тормозные колодки, run entered = 198700, date entered = 2022-08-30, price entered = 50, type entered = Расход
+2022-09-07 13:06:15 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:06:15 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:06:15 DEBUG MyExpenseListSelectionListener:41 - nothing selected
+2022-09-07 13:06:17 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:06:17 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:06:17 DEBUG MyExpenseListSelectionListener:33 - expense - name тормозные колодки, date: 2022-08-30, price = 50, run = 198700 selected
+2022-09-07 13:06:17 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:06:17 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:06:17 DEBUG MyExpenseListSelectionListener:33 - expense - name тормозные колодки, date: 2022-08-30, price = 50, run = 198700 selected
+2022-09-07 13:06:24 INFO  SaveController:40 - the file database.txt has been saved
+2022-09-07 13:06:24 INFO  BackWindowController:13 - pressed "return"
+2022-09-07 13:06:24 INFO  InfoPanelController:17 - main window activated
+2022-09-07 13:06:24 DEBUG Database:93 - method "showTheGreatestValueOfRun" called
+2022-09-07 13:06:24 DEBUG Database:82 - method "showExpenseByRun" called
+2022-09-07 13:06:24 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:06:24 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:06:24 DEBUG Database:242 - method "sumAllExpensesPerMonth" called
+2022-09-07 13:06:24 DEBUG Database:106 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 13:06:24 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 13:06:24 INFO  ReadController:37 - the file database.txt has been read
+2022-09-07 13:06:24 INFO  OpenNewWindowController:47 - window "Расход" open
+2022-09-07 13:06:24 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:06:24 INFO  MyExpenseListSelectionListener:19 - MyExpenseListSelectionListener called
+2022-09-07 13:06:24 DEBUG MyExpenseListSelectionListener:41 - nothing selected
+2022-09-07 13:06:29 INFO  SaveController:40 - the file database.txt has been saved
+2022-09-07 13:06:29 INFO  BackWindowController:13 - pressed "return"
+2022-09-07 13:06:29 INFO  InfoPanelController:17 - main window activated
+2022-09-07 13:06:29 DEBUG Database:93 - method "showTheGreatestValueOfRun" called
+2022-09-07 13:06:29 DEBUG Database:82 - method "showExpenseByRun" called
+2022-09-07 13:06:29 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:06:29 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:06:29 DEBUG Database:242 - method "sumAllExpensesPerMonth" called
+2022-09-07 13:06:29 DEBUG Database:106 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 13:06:29 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 13:06:29 INFO  ReadController:37 - the file database.txt has been read
+2022-09-07 13:06:29 INFO  OpenNewWindowController:47 - window "Замена масла" open
+2022-09-07 13:06:29 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:06:31 INFO  SaveController:40 - the file database.txt has been saved
+2022-09-07 13:06:31 INFO  BackWindowController:13 - pressed "return"
+2022-09-07 13:06:31 INFO  InfoPanelController:17 - main window activated
+2022-09-07 13:06:31 DEBUG Database:93 - method "showTheGreatestValueOfRun" called
+2022-09-07 13:06:31 DEBUG Database:82 - method "showExpenseByRun" called
+2022-09-07 13:06:31 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:06:31 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:06:31 DEBUG Database:242 - method "sumAllExpensesPerMonth" called
+2022-09-07 13:06:31 DEBUG Database:106 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 13:06:31 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 13:06:32 INFO  ReadController:37 - the file database.txt has been read
+2022-09-07 13:06:32 INFO  OpenNewWindowController:33 - window "Заправка" open
+2022-09-07 13:06:32 DEBUG Database:134 - method "searchExpenseByType" called
+2022-09-07 13:06:32 INFO  MyGasExpenseListSelectionListener:20 - MyGasExpenseListSelectionListener called
+2022-09-07 13:06:39 INFO  SaveController:40 - the file database.txt has been saved
+2022-09-07 13:06:39 INFO  BackWindowController:13 - pressed "return"
+2022-09-07 13:06:39 INFO  InfoPanelController:17 - main window activated
+2022-09-07 13:06:39 DEBUG Database:93 - method "showTheGreatestValueOfRun" called
+2022-09-07 13:06:39 DEBUG Database:82 - method "showExpenseByRun" called
+2022-09-07 13:06:39 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:06:39 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:06:39 DEBUG Database:242 - method "sumAllExpensesPerMonth" called
+2022-09-07 13:06:39 DEBUG Database:106 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 13:06:39 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 13:06:44 INFO  Run:34 - new window created
+2022-09-07 13:06:44 INFO  Run:36 - new listWindow created
+2022-09-07 13:06:44 INFO  Run:38 - new GasWindow created
+2022-09-07 13:06:45 INFO  ReadController:37 - the file database.txt has been read
+2022-09-07 13:06:45 INFO  OpenNewWindowController:22 - window "Машина" open
+2022-09-07 13:06:45 INFO  ReadCarController:38 - the file car.txt has been read
+2022-09-07 13:06:45 INFO  InfoPanelController:17 - main window activated
+2022-09-07 13:06:45 DEBUG Database:93 - method "showTheGreatestValueOfRun" called
+2022-09-07 13:06:45 DEBUG Database:82 - method "showExpenseByRun" called
+2022-09-07 13:06:45 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:06:45 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:06:45 DEBUG Database:242 - method "sumAllExpensesPerMonth" called
+2022-09-07 13:06:45 DEBUG Database:106 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 13:06:45 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 13:06:52 INFO  SaveCarController:20 - the file car.txt has been saved
+2022-09-07 13:06:53 INFO  SaveCarController:56 - the file car.txt has been saved
+2022-09-07 13:06:53 INFO  InfoPanelController:17 - main window activated
+2022-09-07 13:06:53 DEBUG Database:93 - method "showTheGreatestValueOfRun" called
+2022-09-07 13:06:53 DEBUG Database:82 - method "showExpenseByRun" called
+2022-09-07 13:06:53 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:06:53 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:06:53 DEBUG Database:242 - method "sumAllExpensesPerMonth" called
+2022-09-07 13:06:53 DEBUG Database:106 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 13:06:53 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 13:06:54 INFO  ReadController:37 - the file database.txt has been read
+2022-09-07 13:06:54 INFO  OpenNewWindowController:22 - window "Машина" open
+2022-09-07 13:06:54 INFO  ReadCarController:38 - the file car.txt has been read
+2022-09-07 13:06:54 INFO  InfoPanelController:17 - main window activated
+2022-09-07 13:06:54 DEBUG Database:93 - method "showTheGreatestValueOfRun" called
+2022-09-07 13:06:54 DEBUG Database:82 - method "showExpenseByRun" called
+2022-09-07 13:06:54 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:06:54 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:06:54 DEBUG Database:242 - method "sumAllExpensesPerMonth" called
+2022-09-07 13:06:54 DEBUG Database:106 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 13:06:54 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 13:06:55 INFO  BackWindowController:13 - pressed "return"
+2022-09-07 13:06:55 INFO  InfoPanelController:17 - main window activated
+2022-09-07 13:06:55 DEBUG Database:93 - method "showTheGreatestValueOfRun" called
+2022-09-07 13:06:55 DEBUG Database:82 - method "showExpenseByRun" called
+2022-09-07 13:06:55 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:06:55 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:06:55 DEBUG Database:242 - method "sumAllExpensesPerMonth" called
+2022-09-07 13:06:55 DEBUG Database:106 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 13:06:55 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 13:06:58 INFO  Run:34 - new window created
+2022-09-07 13:06:58 INFO  Run:36 - new listWindow created
+2022-09-07 13:06:58 INFO  Run:38 - new GasWindow created
+2022-09-07 13:06:58 INFO  ReadController:37 - the file database.txt has been read
+2022-09-07 13:06:58 INFO  OpenNewWindowController:22 - window "Машина" open
+2022-09-07 13:06:58 INFO  ReadCarController:38 - the file car.txt has been read
+2022-09-07 13:06:58 INFO  InfoPanelController:17 - main window activated
+2022-09-07 13:06:58 DEBUG Database:93 - method "showTheGreatestValueOfRun" called
+2022-09-07 13:06:58 DEBUG Database:82 - method "showExpenseByRun" called
+2022-09-07 13:06:58 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:06:58 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:06:58 DEBUG Database:242 - method "sumAllExpensesPerMonth" called
+2022-09-07 13:06:58 DEBUG Database:106 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 13:06:58 DEBUG InfoPanelController:48 - infopanel is filled
+2022-09-07 13:07:00 INFO  BackWindowController:13 - pressed "return"
+2022-09-07 13:07:00 INFO  InfoPanelController:17 - main window activated
+2022-09-07 13:07:00 DEBUG Database:93 - method "showTheGreatestValueOfRun" called
+2022-09-07 13:07:00 DEBUG Database:82 - method "showExpenseByRun" called
+2022-09-07 13:07:00 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:07:00 DEBUG Database:227 - method "sumExpensesPerMonthByType" called
+2022-09-07 13:07:00 DEBUG Database:242 - method "sumAllExpensesPerMonth" called
+2022-09-07 13:07:00 DEBUG Database:106 - method "showTheGreatestValueOfRunByType" called
+2022-09-07 13:07:00 DEBUG InfoPanelController:48 - infopanel is filled

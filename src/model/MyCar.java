@@ -1,17 +1,16 @@
 package model;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 
 public class MyCar implements Serializable {
 
 	private String name;
 	private String id;
-	private String made;
+	private int made;
 	private int tank;
 	private int run;
 
-	public MyCar(String name, String id, String made, int tank, int run) {
+	public MyCar(String name, String id, int made, int tank, int run) {
 
 		this.name = name;
 		this.id = id;
@@ -40,11 +39,11 @@ public class MyCar implements Serializable {
 		this.id = id;
 	}
 
-	public String getMade() {
+	public int getMade() {
 		return made;
 	}
 
-	public void setMade(String made) {
+	public void setMade(int made) {
 		this.made = made;
 	}
 
