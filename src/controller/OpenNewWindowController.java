@@ -2,7 +2,11 @@ package controller;
 
 import java.awt.Component;
 import java.awt.event.ActionEvent;
+import java.awt.event.MouseEvent;
 import java.util.List;
+import java.awt.Cursor;
+
+import javax.swing.event.MouseInputListener;
 
 import org.apache.log4j.Logger;
 
@@ -10,13 +14,13 @@ import model.Expense;
 import view.DigitFilter;
 
 public class OpenNewWindowController extends BaseController {
-	
+
 	private final static Logger LOGGER = Logger.getLogger(OpenNewWindowController.class);
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		String type = ((Component) e.getSource()).getName();
-		
+
 		if (type.equalsIgnoreCase("Машина")) {
 			carWindow.getFrame().setVisible(true);
 			LOGGER.info("window " + "\"" + type + "\" open");
@@ -27,7 +31,7 @@ public class OpenNewWindowController extends BaseController {
 			carWindow.getMadeDoc().setDocumentFilter(new DigitFilter());
 			carWindow.getRunDoc().setDocumentFilter(new DigitFilter());
 			carWindow.getTankDoc().setDocumentFilter(new DigitFilter());
-			
+
 		} else if (type.equalsIgnoreCase("Заправка")) {
 			gasWindow.getFrame().setVisible(true);
 			LOGGER.info("window " + "\"" + type + "\" open");
@@ -41,7 +45,7 @@ public class OpenNewWindowController extends BaseController {
 			gasWindow.getPriceDoc().setDocumentFilter(new DigitFilter());
 			gasWindow.getRunDoc().setDocumentFilter(new DigitFilter());
 			gasWindow.getGasDoc().setDocumentFilter(new DigitFilter());
-			
+
 		} else {
 			listWindow.getFrame().setVisible(true);
 			LOGGER.info("window " + "\"" + type + "\" open");
@@ -56,4 +60,5 @@ public class OpenNewWindowController extends BaseController {
 			listWindow.getRunDoc().setDocumentFilter(new DigitFilter());
 		}
 	}
+
 }

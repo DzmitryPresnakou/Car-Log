@@ -31,6 +31,8 @@ import controller.SaveController;
 import model.Database;
 import model.Expense;
 import java.awt.Font;
+import javax.swing.SpringLayout;
+import javax.swing.SwingConstants;
 
 public class GasWindow extends ListWindow {
 	private JFrame frame;
@@ -62,6 +64,7 @@ public class GasWindow extends ListWindow {
 	private JButton deleteButton = new JButton("Удалить");
 	private JButton backButton = new JButton("Назад");
 	private JDatePickerImpl datePicker;
+	private SpringLayout springLayout;
 
 	public GasWindow() {
 
@@ -87,8 +90,12 @@ public class GasWindow extends ListWindow {
 		p.put("text.year", "Year");
  		JDatePanelImpl panel = new JDatePanelImpl(model, p);
 		datePicker = new JDatePickerImpl(panel, new DateLabelFormatter());
+
+		springLayout = (SpringLayout) datePicker.getLayout();
+		springLayout.putConstraint(SpringLayout.WEST, datePicker.getJFormattedTextField(), 0, SpringLayout.WEST, datePicker);
+		datePicker.getJFormattedTextField().setHorizontalAlignment(SwingConstants.CENTER);
 		datePicker.getJFormattedTextField().setFont(new Font("Tahoma", Font.PLAIN, 11));
-		datePicker.setPreferredSize(new Dimension(111, 20));
+		datePicker.setPreferredSize(new Dimension(110, 20));
 
 		runDoc = (PlainDocument) runField.getDocument();
 		priceDoc = (PlainDocument) priceField.getDocument();
@@ -108,6 +115,8 @@ public class GasWindow extends ListWindow {
 		namePanel.add(nameLabel);
 		nameField.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		namePanel.add(nameField);
+		gasField.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		gasField.setHorizontalAlignment(JLabel.RIGHT);
 		namePanel.add(gasField);
 		JLabel volumeLabel = new JLabel("л");
 		volumeLabel.setFont(new Font("Tahoma", Font.PLAIN, 11));
@@ -121,32 +130,34 @@ public class GasWindow extends ListWindow {
 
 		JLabel runLabel = new JLabel("Пробег");
 		runLabel.setFont(new Font("Tahoma", Font.PLAIN, 11));
-		runLabel.setPreferredSize(new Dimension(40, 20));
+		runLabel.setPreferredSize(new Dimension(36, 20));
 		infoPanel.add(runLabel);
 		runField.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		runField.setHorizontalAlignment(JLabel.RIGHT);
 		infoPanel.add(runField);
 
 		JLabel kmLabel = new JLabel("км");
 		kmLabel.setFont(new Font("Tahoma", Font.PLAIN, 11));
-		kmLabel.setPreferredSize(new Dimension(15, 20));
+		kmLabel.setPreferredSize(new Dimension(14, 20));
 		infoPanel.add(kmLabel);
 
 		JLabel dateLabel = new JLabel("Дата");
 		dateLabel.setFont(new Font("Tahoma", Font.PLAIN, 11));
-		dateLabel.setPreferredSize(new Dimension(30, 20));
+		dateLabel.setPreferredSize(new Dimension(28, 20));
 		infoPanel.add(dateLabel);
 		infoPanel.add(datePicker);
 
 		JLabel priceLabel = new JLabel("Цена");
 		priceLabel.setFont(new Font("Tahoma", Font.PLAIN, 11));
-		priceLabel.setPreferredSize(new Dimension(30, 20));
+		priceLabel.setPreferredSize(new Dimension(28, 20));
 		infoPanel.add(priceLabel);
 		priceField.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		priceField.setHorizontalAlignment(JLabel.RIGHT);
 		infoPanel.add(priceField);
 
 		JLabel bynLabel = new JLabel("р");
 		bynLabel.setFont(new Font("Tahoma", Font.PLAIN, 11));
-		bynLabel.setPreferredSize(new Dimension(10, 20));
+		bynLabel.setPreferredSize(new Dimension(8, 20));
 		infoPanel.add(bynLabel);
 		container.add(infoPanel);
 		addButton.setFont(new Font("Tahoma", Font.PLAIN, 11));

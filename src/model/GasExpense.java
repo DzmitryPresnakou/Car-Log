@@ -23,5 +23,4 @@ public class GasExpense extends Expense {
 	public String toString() {
 		return name + " - " + gas + "л, " + price + " р, пробег: " + run + " км, " + date;
 	}
-
 }

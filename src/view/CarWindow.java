@@ -103,6 +103,7 @@ public class CarWindow extends JFrame {
 		tankLabel.setPreferredSize(new Dimension(118, 20));
 		tankPanel.add(tankLabel);
 		tankField.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		tankField.setHorizontalAlignment(JLabel.RIGHT);
 		tankPanel.add(tankField);
 
 		JLabel volumeLabel = new JLabel("л");
@@ -121,12 +122,10 @@ public class CarWindow extends JFrame {
 		runLabel.setPreferredSize(new Dimension(78, 20));
 		runPanel.add(runLabel);
 		runAmount.setFont(new Font("Tahoma", Font.BOLD, 12));
+		runAmount.setHorizontalAlignment(JLabel.RIGHT);
 		runAmount.setForeground(new Color(0, 0, 255));
 		runAmount.setPreferredSize(new Dimension(60, 20));
 		runPanel.add(runAmount);
-//		runField.setFont(new Font("Tahoma", Font.PLAIN, 11));
-
-//		runPanel.add(runField);
 
 		JLabel kilometerLabel = new JLabel("км");
 		kilometerLabel.setFont(new Font("Tahoma", Font.PLAIN, 10));

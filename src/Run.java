@@ -10,13 +10,16 @@ import controller.DeleteGasExpenseController;
 import controller.EditExpenseController;
 import controller.EditGasExpenseController;
 import controller.InfoPanelController;
+import controller.MouseControllerForWindow;
 import controller.MyExpenseListSelectionListener;
 import controller.MyGasExpenseListSelectionListener;
 import controller.OpenNewWindowController;
 import controller.ReadCarController;
 import controller.ReadController;
 import controller.SaveCarController;
+import controller.RunApplicationController;
 import controller.SaveController;
+import controller.FillInfoPanelOnStartController;
 import model.Database;
 import model.MyCar;
 import view.ListWindow;
@@ -29,7 +32,13 @@ public class Run {
 	private final static Logger LOGGER = Logger.getLogger(Run.class);
 
 	public static void main(String[] args) throws IOException {
-
+		
+		Database generalDB = new Database();
+		RunApplicationController runApplicationController = new RunApplicationController();
+		runApplicationController.setDatabase(generalDB);
+		runApplicationController.readDatabaseOnStart();
+		
+		
 		Window window = new Window();
 		LOGGER.info("new window created");
 		ListWindow listWindow = new ListWindow();
@@ -38,6 +47,21 @@ public class Run {
 		LOGGER.info("new GasWindow created");
 		CarWindow carWindow = new CarWindow();
 		MyCar myCar = new MyCar();
+		
+		FillInfoPanelOnStartController fillInfoPanelOnStartController = new FillInfoPanelOnStartController();
+		fillInfoPanelOnStartController.setCarWindow(carWindow);
+		fillInfoPanelOnStartController.setDatabase(generalDB);
+		fillInfoPanelOnStartController.setWindow(window);
+		fillInfoPanelOnStartController.fillInfopanel();
+
+		
+		InfoPanelController infoPanelController = new InfoPanelController();
+		infoPanelController.setCarWindow(carWindow);
+		infoPanelController.setDatabase(generalDB);
+		
+		infoPanelController.setWindow(window);
+
+		window.setInfoPanelController(infoPanelController);
 
 		OpenNewWindowController openController = new OpenNewWindowController();
 		BackWindowController backController = new BackWindowController();
@@ -46,7 +70,8 @@ public class Run {
 		SaveController saveController = new SaveController();
 		ReadController readController = new ReadController();
 		ReadCarController readCarController = new ReadCarController();
-		InfoPanelController infoPanelController = new InfoPanelController();
+
+		MouseControllerForWindow mouseControllerForWindow = new MouseControllerForWindow();
 		
 		MyExpenseListSelectionListener myExpenseListSelectionListener = new MyExpenseListSelectionListener();
 		MyGasExpenseListSelectionListener myGasExpenseListSelectionListener = new MyGasExpenseListSelectionListener();
@@ -60,10 +85,10 @@ public class Run {
 
 		window.setOpenController(openController);
 		window.setReadController(readController);
-		window.setInfoPanelController(infoPanelController);
 
-		Database generalDB = new Database();
+		window.setMouseControllerForWindow(mouseControllerForWindow);
 
+		
 		listWindow.setDatabase(generalDB);
 		listWindow.setBackWindowController(backController);
 		listWindow.setCloseWindowController(closeController);
@@ -142,9 +167,9 @@ public class Run {
 		myGasExpenseListSelectionListener.setGasWindow(gasWindow);
 		myGasExpenseListSelectionListener.setDatabase(generalDB);
 		
-		infoPanelController.setDatabase(generalDB);
-		infoPanelController.setWindow(window);
-		infoPanelController.setCarWindow(carWindow);
+
+		
+		mouseControllerForWindow.setWindow(window);
 
 	}
 

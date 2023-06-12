@@ -32,6 +32,7 @@ import model.Database;
 import model.Expense;
 
 import java.awt.Font;
+import javax.swing.SwingConstants;
 
 public class ListWindow extends JFrame {
 	private JFrame frame;
@@ -86,7 +87,8 @@ public class ListWindow extends JFrame {
 		p.put("text.year", "Year");
 		JDatePanelImpl panel = new JDatePanelImpl(model, p);
 		datePicker = new JDatePickerImpl(panel, new DateLabelFormatter());
-		datePicker.getJFormattedTextField().setFont(new Font("Tahoma", Font.PLAIN, 11));
+		datePicker.getJFormattedTextField().setHorizontalAlignment(SwingConstants.CENTER);
+	    datePicker.getJFormattedTextField().setFont(new Font("Tahoma", Font.PLAIN, 11));
 		datePicker.setPreferredSize(new Dimension(111, 20));
 
 		runDoc = (PlainDocument) runField.getDocument();
@@ -112,9 +114,11 @@ public class ListWindow extends JFrame {
 
 		JLabel runLabel = new JLabel("Пробег");
 		runLabel.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		runLabel.setHorizontalAlignment(JLabel.RIGHT);
 		runLabel.setPreferredSize(new Dimension(40, 20));
 		infoPanel.add(runLabel);
 		runField.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		runField.setHorizontalAlignment(JLabel.RIGHT);
 		infoPanel.add(runField);
 
 		JLabel kmLabel = new JLabel("км");
@@ -134,6 +138,7 @@ public class ListWindow extends JFrame {
 		priceLabel.setPreferredSize(new Dimension(30, 20));
 		infoPanel.add(priceLabel);
 		priceField.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		priceField.setHorizontalAlignment(JLabel.RIGHT);
 		infoPanel.add(priceField);
 
 		JLabel bynLabel = new JLabel("р");

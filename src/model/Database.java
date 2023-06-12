@@ -2,6 +2,7 @@ package model;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.Month;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -226,11 +227,69 @@ public class Database implements Serializable {
 	public int sumExpensesPerMonthByType(String type) {
 		LOGGER.debug("method \"sumExpensesPerMonthByType\" called");
 		LocalDate today = LocalDate.now();
+		
+		int monthNumber = today.getMonthValue();
+		int year = today.getYear();
+		
 		int sum = 0;
 		int price;
 		for (int i = 0; i < generalDB.size(); i++) {
 			if (generalDB.get(i).getType().equals(type)
-					&& generalDB.get(i).getDate().getMonth().equals(today.getMonth())) {
+					&& generalDB.get(i).getDate().getMonth().equals(today.getMonth())
+					&& generalDB.get(i).getDate().getYear() == year) {
+				price = generalDB.get(i).getPrice();
+				sum += price;
+			}
+		}
+		return sum;
+	}
+
+	public int totalRunPerMonth(Month month, int year) {
+		LOGGER.debug("method \"totalRunPerMonth\" called");
+		
+		int monthNumber = month.getValue();
+		int runPerLastMonth = 0;
+		int runPerCurrentMonth = 0;
+		int maxRunPerLastMonth = 0;
+		int maxRunPerCurrentMonth = 0;
+		int totalRun = 0;
+
+		for (int i = 0; i < generalDB.size(); i++) {
+			if (generalDB.get(i).getDate().getMonth().getValue() < monthNumber 
+					&& generalDB.get(i).getDate().getYear() <= year) {
+				runPerLastMonth = generalDB.get(i).getRun();
+				if (runPerLastMonth > maxRunPerLastMonth) {
+					maxRunPerLastMonth = runPerLastMonth;
+				}
+			}
+			if (generalDB.get(i).getDate().getMonth().equals(month)
+					&& generalDB.get(i).getDate().getYear()==year) {
+				runPerCurrentMonth = generalDB.get(i).getRun();
+				if (runPerCurrentMonth > maxRunPerCurrentMonth) {
+					maxRunPerCurrentMonth = runPerCurrentMonth;
+				}
+			}
+		}
+		if (maxRunPerCurrentMonth == 0) {
+			totalRun = 0;
+		} else if (maxRunPerCurrentMonth > 0) {
+			totalRun = maxRunPerCurrentMonth - maxRunPerLastMonth;
+		}
+
+		return totalRun;
+	}
+
+	public int sumExpensesPerLastMonthByType(String type) {
+		LOGGER.debug("method \"sumExpensesPerLastMonthByType\" called");
+		LocalDate today = LocalDate.now();
+		Month lastMonth = today.getMonth().minus(1);
+		int year = today.getYear();
+		int sum = 0;
+		int price;
+		for (int i = 0; i < generalDB.size(); i++) {
+			if (generalDB.get(i).getType().equals(type)
+					&& generalDB.get(i).getDate().getMonth().equals(lastMonth)
+					&& generalDB.get(i).getDate().getYear() == year) {
 				price = generalDB.get(i).getPrice();
 				sum += price;
 			}
@@ -241,10 +300,29 @@ public class Database implements Serializable {
 	public int sumAllExpensesPerMonth() {
 		LOGGER.debug("method \"sumAllExpensesPerMonth\" called");
 		LocalDate today = LocalDate.now();
+		int year = today.getYear();
 		int sum = 0;
 		int price;
 		for (int i = 0; i < generalDB.size(); i++) {
-			if (generalDB.get(i).getDate().getMonth().equals(today.getMonth())) {
+			if (generalDB.get(i).getDate().getMonth().equals(today.getMonth())
+					&& generalDB.get(i).getDate().getYear() == year) {
+				price = generalDB.get(i).getPrice();
+				sum += price;
+			}
+		}
+		return sum;
+	}
+
+	public int sumAllExpensesPerLastMonth() {
+		LOGGER.debug("method \"sumAllExpensesPerLastMonth\" called");
+		LocalDate today = LocalDate.now();
+		Month lastMonth = today.getMonth().minus(1);
+		int year = today.getYear();
+		int sum = 0;
+		int price;
+		for (int i = 0; i < generalDB.size(); i++) {
+			if (generalDB.get(i).getDate().getMonth().equals(lastMonth)
+					&& generalDB.get(i).getDate().getYear() == year) {
 				price = generalDB.get(i).getPrice();
 				sum += price;
 			}

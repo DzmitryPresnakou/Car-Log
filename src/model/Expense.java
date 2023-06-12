@@ -76,5 +76,4 @@ public class Expense implements Serializable {
 	public String toString() {
 		return name + " - " + price + " р, пробег: " + run + " км, " + date;
 	}
-
 }

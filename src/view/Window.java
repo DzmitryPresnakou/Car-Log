@@ -13,15 +13,21 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import controller.InfoPanelController;
+import controller.MouseControllerForWindow;
 import controller.OpenNewWindowController;
 import controller.ReadController;
 import java.awt.Font;
+import java.awt.event.WindowListener;
+
+import javax.swing.SwingConstants;
 
 public class Window extends JFrame {
 
 	private OpenNewWindowController openController;
 	private ReadController readController;
 	private InfoPanelController infoPanelController;
+	private MouseControllerForWindow mouseControllerForWindow;
+
 	private JButton gasButton = new JButton(new ImageIcon(getClass().getClassLoader().getResource(("gas.jpg"))));
 	private JButton expensesButton = new JButton(
 			new ImageIcon(getClass().getClassLoader().getResource(("expenses.jpg"))));
@@ -33,23 +39,33 @@ public class Window extends JFrame {
 	private JFrame frame;
 	private JLabel run;
 	private JLabel gasExpenses;
+	private JLabel gasLastMonthExpenses;
 	private JLabel oil;
 	private JLabel runAmount;
 	private JLabel date;
 	private JLabel gasAmountExpenses;
+	private JLabel gasAmountLastMonthExpenses;
 	private JLabel gasExpensesMoney;
+	private JLabel gasLastMonthExpensesMoney;
+	private JLabel monthRun;
+	private JLabel monthRunValue;
+	private JLabel lastMonthRun;
+	private JLabel lastMonthRunValue;
 	private JLabel oilReminderRun;
 	private JLabel oilReminderValue;
 	private JLabel carLabel;
 	private JLabel totalExpenses;
+	private JLabel totalLastMonthExpenses;
 	private JLabel totalAmountExpenses;
+	private JLabel totalLastMonthAmountExpenses;
 	private JLabel totalExpensesMoney;
+	private JLabel totalLastMonthExpensesMoney;
 
 	public Window() throws IOException {
 
 		frame = new JFrame("Car log");
 		frame.setResizable(false);
-		frame.setSize(370, 470);
+		frame.setSize(370, 580);
 		// по центру
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -128,7 +144,7 @@ public class Window extends JFrame {
 		container.add(carPanel);
 
 		JPanel infoPanel = new JPanel();
-		infoPanel.setPreferredSize(new Dimension(330, 126));
+		infoPanel.setPreferredSize(new Dimension(330, 240));
 		infoPanel.setBackground(new Color(225, 225, 225));
 		infoPanel.setLayout(new FlowLayout());
 
@@ -140,16 +156,19 @@ public class Window extends JFrame {
 		runAmountPanel.setLayout(new FlowLayout());
 
 		runAmount = new JLabel();
+		runAmount.setHorizontalAlignment(SwingConstants.RIGHT);
 		runAmount.setFont(new Font("Tahoma", Font.BOLD, 12));
 		runAmount.setForeground(new Color(0, 0, 255));
-		runAmount.setPreferredSize(new Dimension(60, 20));
+		runAmount.setPreferredSize(new Dimension(80, 20));
 		runAmountPanel.add(runAmount);
 
 		run = new JLabel("км пробег на дату");
-		run.setPreferredSize(new Dimension(110, 20));
+		run.setHorizontalAlignment(SwingConstants.CENTER);
+		run.setPreferredSize(new Dimension(120, 20));
 		runAmountPanel.add(run);
 
 		date = new JLabel();
+		date.setHorizontalAlignment(SwingConstants.LEFT);
 		date.setFont(new Font("Tahoma", Font.BOLD, 12));
 		date.setForeground(new Color(0, 0, 255));
 		date.setPreferredSize(new Dimension(80, 20));
@@ -163,20 +182,42 @@ public class Window extends JFrame {
 		gasAmountPanel.setLayout(new FlowLayout());
 
 		gasExpenses = new JLabel("Расходы на заправку за текущий месяц");
-		gasExpenses.setPreferredSize(new Dimension(257, 20));
+		gasExpenses.setPreferredSize(new Dimension(242, 20));
 		gasAmountPanel.add(gasExpenses);
 
 		gasAmountExpenses = new JLabel();
 		gasAmountExpenses.setFont(new Font("Tahoma", Font.BOLD, 12));
+		gasAmountExpenses.setHorizontalAlignment(JLabel.RIGHT);
 		gasAmountExpenses.setForeground(new Color(0, 0, 255));
-		gasAmountExpenses.setPreferredSize(new Dimension(35, 20));
+		gasAmountExpenses.setPreferredSize(new Dimension(45, 20));
 		gasAmountPanel.add(gasAmountExpenses);
 
 		gasExpensesMoney = new JLabel("р");
-		gasExpensesMoney.setPreferredSize(new Dimension(10, 20));
+		gasExpensesMoney.setPreferredSize(new Dimension(16, 20));
 		gasAmountPanel.add(gasExpensesMoney);
 
 		infoPanel.add(gasAmountPanel);
+
+		JPanel gasAmountlastMonthPanel = new JPanel();
+		gasAmountlastMonthPanel.setPreferredSize(new Dimension(325, 24));
+		gasAmountlastMonthPanel.setBackground(new Color(225, 225, 225));
+		gasAmountlastMonthPanel.setLayout(new FlowLayout());
+
+		gasLastMonthExpenses = new JLabel("Расходы на заправку за прошлый месяц");
+		gasLastMonthExpenses.setPreferredSize(new Dimension(242, 20));
+		gasAmountlastMonthPanel.add(gasLastMonthExpenses);
+		gasAmountLastMonthExpenses = new JLabel();
+		gasAmountLastMonthExpenses.setFont(new Font("Tahoma", Font.BOLD, 12));
+		gasAmountLastMonthExpenses.setHorizontalAlignment(JLabel.RIGHT);
+		gasAmountLastMonthExpenses.setForeground(new Color(0, 0, 255));
+		gasAmountLastMonthExpenses.setPreferredSize(new Dimension(45, 20));
+		gasAmountlastMonthPanel.add(gasAmountLastMonthExpenses);
+
+		gasLastMonthExpensesMoney = new JLabel("р");
+		gasLastMonthExpensesMoney.setPreferredSize(new Dimension(16, 20));
+		gasAmountlastMonthPanel.add(gasLastMonthExpensesMoney);
+
+		infoPanel.add(gasAmountlastMonthPanel);
 
 		JPanel totalExpensesPanel = new JPanel();
 		totalExpensesPanel.setPreferredSize(new Dimension(325, 24));
@@ -184,19 +225,86 @@ public class Window extends JFrame {
 		totalExpensesPanel.setLayout(new FlowLayout());
 
 		totalExpenses = new JLabel("Общие расходы за текущий месяц");
-		totalExpenses.setPreferredSize(new Dimension(257, 20));
+		totalExpenses.setPreferredSize(new Dimension(242, 20));
 		totalExpensesPanel.add(totalExpenses);
 
 		totalAmountExpenses = new JLabel();
 		totalAmountExpenses.setFont(new Font("Tahoma", Font.BOLD, 12));
+		totalAmountExpenses.setHorizontalAlignment(JLabel.RIGHT);
 		totalAmountExpenses.setForeground(new Color(0, 0, 255));
-		totalAmountExpenses.setPreferredSize(new Dimension(35, 20));
+		totalAmountExpenses.setPreferredSize(new Dimension(45, 20));
 		totalExpensesPanel.add(totalAmountExpenses);
 
 		totalExpensesMoney = new JLabel("р");
-		totalExpensesMoney.setPreferredSize(new Dimension(10, 20));
+		totalExpensesMoney.setPreferredSize(new Dimension(16, 20));
 		totalExpensesPanel.add(totalExpensesMoney);
+
 		infoPanel.add(totalExpensesPanel);
+
+		JPanel totalLastMonthExpensesPanel = new JPanel();
+		totalLastMonthExpensesPanel.setPreferredSize(new Dimension(325, 24));
+		totalLastMonthExpensesPanel.setBackground(new Color(225, 225, 225));
+		totalLastMonthExpensesPanel.setLayout(new FlowLayout());
+
+		totalLastMonthExpenses = new JLabel("Общие расходы за прошлый месяц");
+		totalLastMonthExpenses.setPreferredSize(new Dimension(242, 20));
+		totalLastMonthExpensesPanel.add(totalLastMonthExpenses);
+
+		totalLastMonthAmountExpenses = new JLabel();
+		totalLastMonthAmountExpenses.setFont(new Font("Tahoma", Font.BOLD, 12));
+		totalLastMonthAmountExpenses.setHorizontalAlignment(JLabel.RIGHT);
+		totalLastMonthAmountExpenses.setForeground(new Color(0, 0, 255));
+		totalLastMonthAmountExpenses.setPreferredSize(new Dimension(45, 20));
+		totalLastMonthExpensesPanel.add(totalLastMonthAmountExpenses);
+
+		totalLastMonthExpensesMoney = new JLabel("р");
+		totalLastMonthExpensesMoney.setPreferredSize(new Dimension(16, 20));
+		totalLastMonthExpensesPanel.add(totalLastMonthExpensesMoney);
+
+		totalLastMonthExpensesPanel.add(totalLastMonthExpensesMoney);
+		infoPanel.add(totalLastMonthExpensesPanel);
+
+		JPanel totalRunPanel = new JPanel();
+		totalRunPanel.setPreferredSize(new Dimension(325, 24));
+		totalRunPanel.setBackground(new Color(225, 225, 225));
+		totalRunPanel.setLayout(new FlowLayout());
+
+		run = new JLabel("Пробег за текущий месяц");
+		run.setPreferredSize(new Dimension(227, 20));
+		totalRunPanel.add(run);
+
+		monthRun = new JLabel();
+		monthRun.setFont(new Font("Tahoma", Font.BOLD, 12));
+		monthRun.setHorizontalAlignment(JLabel.RIGHT);
+		monthRun.setForeground(new Color(0, 0, 255));
+		monthRun.setPreferredSize(new Dimension(60, 20));
+		totalRunPanel.add(monthRun);
+
+		monthRunValue = new JLabel("км");
+		monthRunValue.setPreferredSize(new Dimension(16, 20));
+		totalRunPanel.add(monthRunValue);
+		infoPanel.add(totalRunPanel);
+
+		JPanel totalLastMonthRunPanel = new JPanel();
+		totalLastMonthRunPanel.setPreferredSize(new Dimension(325, 24));
+		totalLastMonthRunPanel.setBackground(new Color(225, 225, 225));
+		totalLastMonthRunPanel.setLayout(new FlowLayout());
+
+		run = new JLabel("Пробег за прошлый месяц");
+		run.setPreferredSize(new Dimension(227, 20));
+		totalLastMonthRunPanel.add(run);
+
+		lastMonthRun = new JLabel();
+		lastMonthRun.setFont(new Font("Tahoma", Font.BOLD, 12));
+		lastMonthRun.setHorizontalAlignment(JLabel.RIGHT);
+		lastMonthRun.setForeground(new Color(0, 0, 255));
+		lastMonthRun.setPreferredSize(new Dimension(60, 20));
+		totalLastMonthRunPanel.add(lastMonthRun);
+
+		lastMonthRunValue = new JLabel("км");
+		lastMonthRunValue.setPreferredSize(new Dimension(16, 20));
+		totalLastMonthRunPanel.add(lastMonthRunValue);
+		infoPanel.add(totalLastMonthRunPanel);
 
 		JPanel oilReminderPanel = new JPanel();
 		oilReminderPanel.setPreferredSize(new Dimension(325, 24));
@@ -204,20 +312,21 @@ public class Window extends JFrame {
 		oilReminderPanel.setLayout(new FlowLayout());
 
 		oil = new JLabel("Пробег после замены масла");
-		oil.setPreferredSize(new Dimension(247, 20));
+		oil.setPreferredSize(new Dimension(227, 20));
 		oilReminderPanel.add(oil);
 
 		oilReminderRun = new JLabel();
 		oilReminderRun.setFont(new Font("Tahoma", Font.BOLD, 12));
+		oilReminderRun.setHorizontalAlignment(JLabel.RIGHT);
 		oilReminderRun.setForeground(new Color(0, 0, 255));
-		oilReminderRun.setPreferredSize(new Dimension(40, 20));
+		oilReminderRun.setPreferredSize(new Dimension(60, 20));
 		oilReminderPanel.add(oilReminderRun);
 
 		oilReminderValue = new JLabel("км");
 		oilReminderValue.setPreferredSize(new Dimension(16, 20));
 		oilReminderPanel.add(oilReminderValue);
 		infoPanel.add(oilReminderPanel);
-
+		
 		frame.setVisible(true);
 	}
 
@@ -247,6 +356,38 @@ public class Window extends JFrame {
 		oilButton.addActionListener(readController);
 		carwashButton.addActionListener(readController);
 		carButton.addActionListener(readController);
+	}
+
+	public JLabel getMonthRun() {
+		return monthRun;
+	}
+
+	public void setMonthRun(JLabel monthRun) {
+		this.monthRun = monthRun;
+	}
+
+	public JLabel getLastMonthRun() {
+		return lastMonthRun;
+	}
+
+	public void setLastMonthRun(JLabel lastMonthRun) {
+		this.lastMonthRun = lastMonthRun;
+	}
+
+	public JLabel getTotalLastMonthAmountExpenses() {
+		return totalLastMonthAmountExpenses;
+	}
+
+	public void setTotalLastMonthAmountExpenses(JLabel totalLastMonthAmountExpenses) {
+		this.totalLastMonthAmountExpenses = totalLastMonthAmountExpenses;
+	}
+
+	public JLabel getGasAmountLastMonthExpenses() {
+		return gasAmountLastMonthExpenses;
+	}
+
+	public void setGasAmountLastMonthExpenses(JLabel gasAmountLastMonthExpenses) {
+		this.gasAmountLastMonthExpenses = gasAmountLastMonthExpenses;
 	}
 
 	public JLabel getGasExpenses() {
@@ -401,6 +542,15 @@ public class Window extends JFrame {
 		this.date.setText(date);
 	}
 
+	public MouseControllerForWindow getMouseControllerForWindow() {
+		return mouseControllerForWindow;
+	}
+
+	public void setMouseControllerForWindow(MouseControllerForWindow mouseControllerForWindow) {
+		this.mouseControllerForWindow = mouseControllerForWindow;
+		carButton.addMouseMotionListener(mouseControllerForWindow);
+	}
+
 	public InfoPanelController getInfoPanelController() {
 		return infoPanelController;
 	}
@@ -408,6 +558,5 @@ public class Window extends JFrame {
 	public void setInfoPanelController(InfoPanelController infoPanelController) {
 		this.infoPanelController = infoPanelController;
 		frame.addWindowListener(infoPanelController);
-
 	}
 }

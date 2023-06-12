@@ -1,22 +1,26 @@
 package controller;
 
 import java.awt.Color;
-import java.awt.event.ActionEvent;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
 import java.time.LocalDate;
 import java.time.Month;
-
 import org.apache.log4j.Logger;
 
+import model.Database;
 import model.Expense;
+import view.CarWindow;
+import view.Window;
 
-public class InfoPanelController extends BaseController implements WindowListener {
-	private final static Logger LOGGER = Logger.getLogger(InfoPanelController.class);
+public class FillInfoPanelOnStartController {
 
-	@Override
-	public void windowActivated(WindowEvent e) {
-		LOGGER.info("main window activated");
+	private final static Logger LOGGER = Logger.getLogger(FillInfoPanelOnStartController.class);
+
+	protected Window window;
+	protected CarWindow carWindow;
+	protected Database database;
+
+	public void fillInfopanel() {
+
+		LOGGER.info("main window has started");
 		LocalDate today = LocalDate.now();
 		Month nowMonth = today.getMonth();
 		int year = today.getYear();
@@ -39,6 +43,17 @@ public class InfoPanelController extends BaseController implements WindowListene
 		int runPerMonth = database.totalRunPerMonth(nowMonth, year);
 		int runPerLastMonth = database.totalRunPerMonth(lastMonth, year);
 
+		window.getRunAmount().setText(Integer.toString(maxRun));
+		carWindow.setRunAmount(Integer.toString(maxRun));
+		window.getGasAmountExpenses().setText(Integer.toString(gasExpensesPerMonth));
+		window.getGasAmountLastMonthExpenses().setText(Integer.toString(gasExpensesPerLastMonth));
+
+		window.getMonthRun().setText(Integer.toString(runPerMonth));
+		window.getLastMonthRun().setText(Integer.toString(runPerLastMonth));
+
+		window.getTotalAmountExpenses().setText(Integer.toString(allExpensesPerMonth));
+		window.getTotalLastMonthAmountExpenses().setText(Integer.toString(allExpensesPerLastMonth));
+
 		int oilChangeLastRun = database.showTheGreatestValueOfRunByType(oilType);
 		if (oilChangeLastRun > 0) {
 			oilChangeAfterRun = maxRun - oilChangeLastRun;
@@ -51,18 +66,9 @@ public class InfoPanelController extends BaseController implements WindowListene
 		} else {
 			window.getDate().setText(null);
 		}
-		window.getRunAmount().setText(Integer.toString(maxRun));
-		carWindow.setRunAmount(Integer.toString(maxRun));
-		window.getGasAmountExpenses().setText(Integer.toString(gasExpensesPerMonth));
-		window.getGasAmountLastMonthExpenses().setText(Integer.toString(gasExpensesPerLastMonth));
-
-		window.getMonthRun().setText(Integer.toString(runPerMonth));
-		window.getLastMonthRun().setText(Integer.toString(runPerLastMonth));
-
-		window.getTotalAmountExpenses().setText(Integer.toString(allExpensesPerMonth));
-		window.getTotalLastMonthAmountExpenses().setText(Integer.toString(allExpensesPerLastMonth));
 
 		window.getOilReminderRun().setText(Integer.toString(oilChangeAfterRun));
+
 		if (oilChangeAfterRun <= 9000) {
 			window.getOilReminderRun().setForeground(new Color(0, 0, 255));
 		} else if (oilChangeAfterRun > 9000 & oilChangeAfterRun <= 10000) {
@@ -71,41 +77,31 @@ public class InfoPanelController extends BaseController implements WindowListene
 			window.getOilReminderRun().setForeground(new Color(255, 0, 0));
 		}
 
-		LOGGER.debug("infopanel is filled");
+		LOGGER.debug("infopanel has filled");
 	}
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
-
+	public Window getWindow() {
+		return window;
 	}
 
-	@Override
-	public void windowOpened(WindowEvent e) {
-
+	public void setWindow(Window window) {
+		this.window = window;
 	}
 
-	@Override
-	public void windowClosing(WindowEvent e) {
-
+	public CarWindow getCarWindow() {
+		return carWindow;
 	}
 
-	@Override
-	public void windowClosed(WindowEvent e) {
-
+	public void setCarWindow(CarWindow carWindow) {
+		this.carWindow = carWindow;
 	}
 
-	@Override
-	public void windowIconified(WindowEvent e) {
-
+	public Database getDatabase() {
+		return database;
 	}
 
-	@Override
-	public void windowDeiconified(WindowEvent e) {
-
+	public void setDatabase(Database database) {
+		this.database = database;
 	}
 
-	@Override
-	public void windowDeactivated(WindowEvent e) {
-
-	}
 }
